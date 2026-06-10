@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import ViewportScaler from "@/components/ViewportScaler";
 import "./globals.css";
 
 const inter = Inter({
@@ -45,7 +46,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ViewportScaler />
+        {children}
+      </body>
     </html>
   );
 }

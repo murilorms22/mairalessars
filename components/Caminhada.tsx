@@ -8,19 +8,19 @@ const tickerCities = [
 
 const images = [
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBFXMVsbzL1JcabO-goawBrKJb0-stlWyv1q1eyutC8TOEKUWsBURkFkL1EObp8e9uI68OUmviD2Skbo2h74w3E0fqPy9m7DlBovsJOjAIU3sm5KZ5MsbMSHpQf_GE6k_bKcKuUTIBBnQM914h84h2El6j9SRrjqC4m-m1KRui9LLD_vWlosLwdNV0lL-eb-tx4FW2woYsaY8Yc96rZLxS0yiw3INqjcKVM9phycXFR1smhfIHLczaJcdsvFsLxDFycFDoq8zrxcS9P",
+    src: "/caminhada-1.jpeg",
     alt: "Caminhada 1",
   },
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIA_sRfal8TG-8-vUXrgyesyAK0kjOjLzBxG354pjXrTY5H7oB--o57YRUxLgLRNndevJvFICg4_fY0iSPE3D2rg6BTJejY1ccpqdzxHcU2fI_deZvThAOVtwaz-vvDbZEWGpYoU5rOxtPYpkboEZbaFN7FDSaxjjnSWpR9QzSKYJnJdDODFaj0ZRNSiN1pg0u4iq-QQEahU2FBRAZEk84rtLqU8ULDTD69FvWgjBkGULfKrEsgmbamBGq-bwbvxoLIs8e2UMu84-H",
+    src: "/caminhada-2.jpeg",
     alt: "Caminhada 2",
   },
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCAL5t_o2RHh_ZcwHxbzkKc3ALA-mJqScFU1CJjflFYG4RDjAwKVXMqtX8GpSLw_yQ8ONQuEe_Vq6CcxmnFMzJIsY6Ws6z5IH_9FvWajkuJf8pJ1clN3g16gZ-v7tKY1lv3FXRb4cek9awlKV9abhVtx7TCg3g-eR6wL435Wryx3ZQiTaBFsKyi6c_sVzGW1qVlzdfp0E2f93U-vuuF1KypZAtARXUi6GmqR8-OhnMetdlnrjsPMycLke687X77CvVCh8_u1IMxNxjo",
+    src: "/caminhada-3.jpeg", 
     alt: "Caminhada 3",
   },
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCUaUANLi-4XBSZYNh1FcS1mx3x2pZdbiELMweB2U_Lc3FRJ23qiYzYSU6GZb_cD3oPOWqoUMDj5sM6Zj1nSV4VaOQeZwP-Ju3zP-4dDzvMSHOxyh9GHMPR_0D6zyfUo7AeSwUdh-oHjMAwZhadA5Q86J8pnMmkeOHQ5-ifmN_N47YMzAKOLys-M1RwZGo6UsyCXH5nYjk3ctoHmnDh4Y4jCuywnzL12_BMIrIdC1atbZGbFyHkAzyizX5sKVwC2-tI-pamLYOZJfsc",
+    src: "/caminhada-4.jpeg",
     alt: "Caminhada 4",
   },
 ];
@@ -98,7 +98,7 @@ export default function Caminhada() {
                 style={{ minHeight: "320px" }}>
                 <img
                   alt={images[0].alt}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover  transition-all duration-700 group-hover:scale-105"
                   src={images[0].src}
                 />
               </div>
@@ -107,7 +107,7 @@ export default function Caminhada() {
               <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg group aspect-[16/9]">
                 <img
                   alt={images[1].alt}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover  transition-all duration-700 group-hover:scale-105"
                   src={images[1].src}
                 />
               </div>
@@ -116,7 +116,7 @@ export default function Caminhada() {
               <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square">
                 <img
                   alt={images[2].alt}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                   src={images[2].src}
                 />
               </div>
@@ -124,7 +124,7 @@ export default function Caminhada() {
               <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square">
                 <img
                   alt={images[3].alt}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                   src={images[3].src}
                 />
               </div>

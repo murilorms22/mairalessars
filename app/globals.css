@@ -65,6 +65,11 @@
 }
 
 /* ===== BASE STYLES ===== */
+:root {
+  --vp-zoom: 0.8;
+  --hero-height: 100vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -75,7 +80,7 @@ body {
   font-family: var(--font-inter);
   font-size: 16px;
   line-height: 1.6;
-  zoom: 0.8;
+  zoom: var(--vp-zoom);
 }
 
 ::selection {

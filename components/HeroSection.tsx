@@ -1,7 +1,7 @@
 export default function HeroSection() {
   return (
     <header
-      className="relative w-full min-h-screen flex items-center overflow-hidden bg-white pt-24"
+      className="relative w-full min-h-[100vh] flex items-center overflow-hidden bg-white pt-24"
       id="inicio"
     >
       {/* Checkered background */}
@@ -53,11 +53,11 @@ export default function HeroSection() {
         </div>
 
         {/* Right: Photo + Logo */}
-        <div className="hidden lg:flex col-span-6 relative h-full min-h-screen items-end justify-center">
+        <div className="hidden relative lg:flex col-span-6 h-full min-h-screen items-end justify-center">
           {/* Maíra photo — bottom-aligned, full height feel */}
           <img
             alt="Maíra Lessa"
-            className="relative z-10 h-[90%] max-h-[1000px] w-auto object-contain object-bottom drop-shadow-2xl select-none"
+            className="relative z-10 h-full w-auto object-contain object-bottom drop-shadow-2xl select-none"
             src="/maira-hero2.png"
             draggable={false}
           />

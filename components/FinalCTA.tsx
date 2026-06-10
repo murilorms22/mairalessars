@@ -42,19 +42,19 @@ export default function FinalCTA() {
               </p>
             </div>
             <div className="col-span-12 lg:col-span-5 lg:col-start-8 relative fade-up">
-              <div className="aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 <img
                   alt="Maíra Lessa"
                   className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSmgcW51hcYNaXxLcX-DKHU11a5XVV7PnyWxjPjUNQ7nmKZtDOBq_wtQRe9ZdJvVEiP0CwW9gprRg28L8MR0hVulxq_pbPUI3bA1PwEywXV-q2T_-DvsVAp5Y5Mg9l2exCfdlSTjabg4003nEPOSH_qsL5qv77yjXN3oHlX3PM03KE1Ab2v7qbJmT7u-SdSV_2_j9iP7bP62wstm_zznQwLIRxCDomFps3puYXF0j3-ryf2wNCiM0120FYScSu7rsivOkXptfEexAZ"
+                  src="/final-1.jpeg"
                 />
               </div>
               {/* Small Accent Image */}
-              <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-2xl overflow-hidden border-4 border-[#050505] shadow-2xl z-20 rotate-[-6deg] hidden md:block">
+              <div className="absolute -bottom-10 -left-10 w-36 h-36 rounded-2xl overflow-hidden border-4 border-[#050505] shadow-2xl z-20 rotate-[-6deg] hidden md:block">
                 <img
                   alt="Detail"
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM4h5xQJi0oghYwpHIM8zNMhYJ-Op0E-NeJ11mgraVkYuX_TpFL-lPvEmzrrbR9pUlAs4aJlDW8gWPBBo3pg-JORgpEuuwzgI28z921raJpw-8iW7Kd-BfmaKTnUuNEhwbp7J61nMuT5Q3DQmhMh91EEibXG0SnXWBwMp8lb8zu6ab5t3dYuk0iN9lvd6eh0i1gfIPxsx9XRMr7V0tpfREro4YNQRzsRcf69iRyD9Oe_XhmpgjcNgqWzhZ1X8IAK-_kJC_vjqUrzMl"
+                  src="/final-extra.jpeg"
                 />
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function FinalCTA() {
                 <img
                   alt="Maíra Lessa Presence"
                   className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzDBadSwuZdEWlHGKzd1NWJGqMAOtNkScwFrtkznKXiTERCpAVe-Cxhtb9BQkT9a2SDA8WUlcfD_fVq64rTphiP5Bb6ngtZsgrRG2uGvvO6cbHKgas4Kpihh2ZF9P9tjwVDRUvr82FcIf868iD_70k7zIXFPMVxlfS0I6WS4zv2xVn3X2GDMCaLpvfSLBJsvKDD41P2LtX0gjkYSUQK7tSsOlYhKYi1_DPbIGelAv33KUQ1Dvb7sBrHeLm0zTmNZ-bVc1cpXGpMgYV"
+                  src="/final-2.jpeg"
                 />
               </div>
               {/* Floating Glow Accent */}

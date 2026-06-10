@@ -59,8 +59,8 @@ export default function QuemEMaira() {
             <div className="aspect-[3/4] bg-surface-dim relative overflow-hidden rounded-3xl shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] group">
               <img
                 alt="Maíra Lessa Portrait"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzDBadSwuZdEWlHGKzd1NWJGqMAOtNkScwFrtkznKXiTERCpAVe-Cxhtb9BQkT9a2SDA8WUlcfD_fVq64rTphiP5Bb6ngtZsgrRG2uGvvO6cbHKgas4Kpihh2ZF9P9tjwVDRUvr82FcIf868iD_70k7zIXFPMVxlfS0I6WS4zv2xVn3X2GDMCaLpvfSLBJsvKDD41P2LtX0gjkYSUQK7tSsOlYhKYi1_DPbIGelAv33KUQ1Dvb7sBrHeLm0zTmNZ-bVc1cpXGpMgYV"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                src="/jornada.jpeg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
@@ -97,15 +97,6 @@ export default function QuemEMaira() {
                 comunidades e construir uma caminhada baseada em verdade,
                 sensibilidade e ação.
               </p>
-            </div>
-
-            {/* Additional Image */}
-            <div className="absolute -bottom-24 -right-12 w-64 aspect-square rounded-2xl overflow-hidden shadow-2xl z-40 hidden md:block group">
-              <img
-                alt="Detail"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAL5t_o2RHh_ZcwHxbzkKc3ALA-mJqScFU1CJjflFYG4RDjAwKVXMqtX8GpSLw_yQ8ONQuEe_Vq6CcxmnFMzJIsY6Ws6z5IH_9FvWajkuJf8pJ1clN3g16gZ-v7tKY1lv3FXRb4cek9awlKV9abhVtx7TCg3g-eR6wL435Wryx3ZQiTaBFsKyi6c_sVzGW1qVlzdfp0E2f93U-vuuF1KypZAtARXUi6GmqR8-OhnMetdlnrjsPMycLke687X77CvVCh8_u1IMxNxjo"
-              />
             </div>
           </div>
         </div>
