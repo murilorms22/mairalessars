@@ -4,12 +4,15 @@ import QuemEMaira from "@/components/QuemEMaira";
 import Proposito from "@/components/Proposito";
 import Caminhada from "@/components/Caminhada";
 import FinalCTA from "@/components/FinalCTA";
+import PhotoStack from "@/components/PhotoStack";
 import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import ViewportScaler from "@/components/ViewportScaler";
 
 export default function Home() {
   return (
     <>
+      <ViewportScaler />
       <ScrollAnimations />
       <TopNavBar />
       <main>
@@ -17,6 +20,7 @@ export default function Home() {
         <QuemEMaira />
         <Proposito />
         <Caminhada />
+        <PhotoStack />
         <FinalCTA />
       </main>
       <Footer />

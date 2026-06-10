@@ -114,14 +114,17 @@ export default function Proposito() {
                   </span>
                 </div>
                 <h4
-                  className="text-[28px] text-white font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                  className="text-[28px] text-white font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out"
                   style={{ fontFamily: "var(--font-montserrat)" }}
                 >
                   {card.title}
                 </h4>
-                <p className="text-surface-variant/80 text-[16px] h-0 opacity-0 overflow-hidden group-hover:h-auto group-hover:opacity-100 group-hover:mt-4 transition-all duration-300">
-                  {card.description}
-                </p>
+                {/* Description slides up from below — clip provided by parent overflow-hidden */}
+                <div className="overflow-hidden">
+                  <p className="text-surface-variant/80 text-[15px] leading-relaxed translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-75 pt-2">
+                    {card.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
