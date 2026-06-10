@@ -24,12 +24,12 @@ export default function Footer() {
             <img
               src="/maira-logo.png"
               alt="Maíra Lessa"
-              className="h-16 w-auto object-contain"
+              className="h-36 w-auto object-contain"
             />
           </Link>
 
           {/* Nav links */}
-          <nav className="flex flex-wrap gap-x-10 gap-y-4 justify-start md:justify-end">
+          <nav className="flex flex-col flex-wrap my-auto gap-x-10 gap-y-4 justify-start md:justify-end">
             {footerLinks.map((link) => (
               <Link
                 key={link.label}
@@ -45,10 +45,17 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-surface-variant/20 pt-8">
-          <p className="text-[13px] text-secondary/60 text-center md:text-left">
-            © 2024 Maíra Lessa. Todos os direitos reservados.
-          </p>
+        <div className="border-t border-surface-variant/20 pt-8 flex flex-col md:flex-row justify-between">
+          <div>
+            <p className="text-[13px] text-secondary/60 text-center md:text-left">
+              © 2024 Maíra Lessa. Todos os direitos reservados.
+            </p>
+          </div>
+          <div>
+            <p className="text-[13px] text-secondary/60 text-center md:text-left">
+              Desenvolvido por <Link href="https://muxstudio.com.br" target="_blank" rel="noopener noreferrer" className="text-primary-container hover:text-primary transition-colors duration-200">MUX Studio</Link>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -146,9 +146,8 @@ export default function Proposito() {
               className="text-primary-container font-bold text-[48px] md:text-[64px] block mt-4 drop-shadow-[0_0_15px_rgba(163,230,53,0.3)]"
               style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
             >
-              superAÇÃO
+              superAÇÃO.
             </strong>
-            .
           </p>
         </div>
       </div>

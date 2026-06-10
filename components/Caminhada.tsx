@@ -32,15 +32,14 @@ export default function Caminhada() {
       id="caminhada"
     >
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-        {/* Centered Header */}
-        <div className="text-center mb-20 fade-up">
-          <h2 className="text-[14px] font-semibold uppercase text-secondary tracking-widest mb-6 flex items-center justify-center gap-4 font-[var(--font-inter)]">
-            <span className="w-3 h-3 rounded-full bg-primary-container/40 inline-block" />
+        {/* Left-aligned Header */}
+        <div className="mb-16 fade-up">
+          <h2 className="text-[14px] font-semibold uppercase text-secondary tracking-widest mb-6 flex items-center gap-4 font-[var(--font-inter)]">
+            <span className="w-16 h-px bg-primary-container inline-block" />
             Caminhada
-            <span className="w-3 h-3 rounded-full bg-primary-container/40 inline-block" />
           </h2>
           <h3
-            className="text-[48px] md:text-[64px] text-on-surface leading-tight font-bold max-w-4xl mx-auto"
+            className="text-[48px] md:text-[64px] text-on-surface leading-tight font-bold max-w-4xl"
             style={{ fontFamily: "var(--font-montserrat)" }}
           >
             Uma caminhada feita de{" "}
@@ -89,21 +88,48 @@ export default function Caminhada() {
             </div>
           </div>
 
-          {/* Right Column: 2x2 Image Grid */}
-          <div className="col-span-12 lg:col-span-8 grid grid-cols-2 gap-6">
-            {images.map((img, i) => (
-              <div
-                key={img.alt}
-                className={`rounded-2xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.08)] group ${i === 3 ? "aspect-[16/10]" : "aspect-[4/3]"
-                  }`}
-              >
+          {/* Right Column: Asymmetric bento grid */}
+          <div className="col-span-12 lg:col-span-8">
+            {/* Row 1: tall portrait left + two stacked right */}
+            <div className="grid grid-cols-3 gap-4 h-full">
+
+              {/* Image 1 — tall portrait, spans 2 rows */}
+              <div className="col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg group"
+                style={{ minHeight: "320px" }}>
                 <img
-                  alt={img.alt}
+                  alt={images[0].alt}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                  src={img.src}
+                  src={images[0].src}
                 />
               </div>
-            ))}
+
+              {/* Image 2 — wide 16:9 top-right */}
+              <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg group aspect-[16/9]">
+                <img
+                  alt={images[1].alt}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  src={images[1].src}
+                />
+              </div>
+
+              {/* Bottom row: small square + wider landscape */}
+              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square">
+                <img
+                  alt={images[2].alt}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  src={images[2].src}
+                />
+              </div>
+
+              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square">
+                <img
+                  alt={images[3].alt}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  src={images[3].src}
+                />
+              </div>
+
+            </div>
           </div>
         </div>
       </div>

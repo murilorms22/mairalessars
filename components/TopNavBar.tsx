@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
@@ -9,69 +11,72 @@ const navLinks = [
   { href: "#proposito", label: "Propósito" },
   { href: "#caminhada", label: "Caminhada" },
   { href: "#novidades", label: "Receba novidades" },
-  { href: "#", label: "Instagram", external: true },
+  { href: "#", label: "Instagram" },
 ];
 
 export default function TopNavBar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-white/90 backdrop-blur-md text-primary sticky top-0 z-50 transition-all duration-300 ease-in-out">
-      <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-[80px]">
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${isScrolled
+        ? "py-3 shadow-[0_1px_0_0_rgba(0,0,0,0.06)]"
+        : "py-3"
+        }`}
+    >
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
         {/* Logo */}
         <Link
           href="#inicio"
-          className="font-[var(--font-montserrat)] text-[24px] text-on-surface tracking-tighter hover:text-primary-container transition-colors duration-300"
-          style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
+          className="flex items-center opacity-90 hover:opacity-100 transition-opacity duration-300 shrink-0"
         >
-          Maíra Lessa
+          <Image
+            src="/maira-logo.png"
+            alt="Maíra Lessa"
+            width={200}
+            height={80}
+            className={`w-auto object-contain transition-all duration-300 ${isScrolled ? "h-14" : "h-20"
+              }`}
+            priority
+          />
         </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link, i) => (
+          {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={`font-[var(--font-inter)] text-[14px] font-semibold uppercase tracking-[0.1em] leading-none transition-all duration-300 ease-in-out ${i === 0
-                ? "text-primary border-b-2 border-primary pb-1"
-                : "text-secondary hover:text-primary hover:opacity-80"
-                }`}
+              className="relative text-[13px] font-semibold uppercase tracking-[0.08em] text-[#282726] transition-all duration-200 group"
             >
-              {link.label}
+              <span className="group-hover:bg-primary-container group-hover:bg-clip-text group-hover:text-transparent transition-all duration-200">
+                {link.label}
+              </span>
+              {/* Animated underline */}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-container group-hover:w-full transition-all duration-300" />
             </Link>
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile: only hamburger icon */}
         <button
-          className="md:hidden text-on-surface p-2 hover:text-primary-container transition-colors"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden text-[#282726] p-2 hover:text-primary-container transition-colors"
           aria-label="Toggle menu"
         >
-          <span className="material-symbols-outlined">
-            {mobileMenuOpen ? "close" : "menu"}
-          </span>
+          <span className="material-symbols-outlined">menu</span>
         </button>
       </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-surface/95 backdrop-blur-xl border-t border-surface-variant/30 px-margin-mobile pb-8">
-          <div className="flex flex-col gap-6 pt-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="font-[var(--font-inter)] text-[14px] font-semibold uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
+    </motion.nav>
   );
 }

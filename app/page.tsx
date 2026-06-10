@@ -6,10 +6,12 @@ import Caminhada from "@/components/Caminhada";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import ViewportScaler from "@/components/ViewportScaler";
 
 export default function Home() {
   return (
     <>
+      <ViewportScaler />
       <ScrollAnimations />
       <TopNavBar />
       <main>
