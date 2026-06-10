@@ -57,11 +57,11 @@ const purposeCards = [
 export default function Proposito() {
   return (
     <section
-      className="py-section-gap w-full bg-[#050505] text-surface-container-lowest relative overflow-hidden"
+      className="py-section-gap w-full bg-[#000000] text-surface-container-lowest relative overflow-hidden"
       id="proposito"
     >
       {/* Radial gradient background */}
-      <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_rgba(163,230,53,0.1),_transparent,_transparent)] z-0" />
+      <div className="absolute top-0 right-0 w-full h-full bg-radial from-primary-container/10 to-black/50 z-0" />
 
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
         {/* Header */}
