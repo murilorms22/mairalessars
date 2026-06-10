@@ -25,7 +25,7 @@ export default function FinalCTA() {
               Quando a dor vira propósito, <br />
               <span
                 className="text-primary-container text-[72px] md:text-[100px] block mt-6"
-                style={{ fontFamily: "var(--font-syne)" }}
+                style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
               >
                 a caminhada ganha sentido.
               </span>

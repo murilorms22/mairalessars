@@ -16,13 +16,13 @@ export default function TopNavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-surface/90 backdrop-blur-md text-primary sticky top-0 z-50 transition-all duration-300 ease-in-out">
+    <nav className="bg-white/90 backdrop-blur-md text-primary sticky top-0 z-50 transition-all duration-300 ease-in-out">
       <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-[80px]">
         {/* Logo */}
         <Link
           href="#inicio"
-          className="font-[var(--font-syne)] text-[24px] text-on-surface tracking-tighter hover:text-primary-container transition-colors duration-300"
-          style={{ fontFamily: "var(--font-syne)" }}
+          className="font-[var(--font-montserrat)] text-[24px] text-on-surface tracking-tighter hover:text-primary-container transition-colors duration-300"
+          style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
         >
           Maíra Lessa
         </Link>
@@ -33,11 +33,10 @@ export default function TopNavBar() {
             <Link
               key={link.label}
               href={link.href}
-              className={`font-[var(--font-inter)] text-[14px] font-semibold uppercase tracking-[0.1em] leading-none transition-all duration-300 ease-in-out ${
-                i === 0
-                  ? "text-primary border-b-2 border-primary pb-1"
-                  : "text-secondary hover:text-primary hover:opacity-80"
-              }`}
+              className={`font-[var(--font-inter)] text-[14px] font-semibold uppercase tracking-[0.1em] leading-none transition-all duration-300 ease-in-out ${i === 0
+                ? "text-primary border-b-2 border-primary pb-1"
+                : "text-secondary hover:text-primary hover:opacity-80"
+                }`}
             >
               {link.label}
             </Link>

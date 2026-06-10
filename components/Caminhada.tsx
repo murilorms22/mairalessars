@@ -28,7 +28,7 @@ const images = [
 export default function Caminhada() {
   return (
     <section
-      className="py-section-gap w-full bg-surface-container-low overflow-hidden relative"
+      className="pt-section-gap w-full bg-surface-container-low overflow-hidden relative"
       id="caminhada"
     >
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
@@ -46,7 +46,7 @@ export default function Caminhada() {
             Uma caminhada feita de{" "}
             <span
               className="text-primary-container"
-              style={{ fontFamily: "var(--font-syne)" }}
+              style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
             >
               encontros
             </span>
@@ -109,15 +109,45 @@ export default function Caminhada() {
       </div>
 
       {/* Ticker Bar */}
-      <div className="w-full bg-on-surface py-8 mt-32 relative z-20 overflow-hidden">
+      <div className="w-full bg-primary-container py-6 mt-32 relative z-20 overflow-hidden">
         <div className="ticker-wrap">
-          <div className="ticker flex gap-12 items-center">
-            {[...tickerCities, ...tickerCities].map((city, i) => (
+          <div
+            style={{
+              display: "inline-flex",
+              flexWrap: "nowrap",
+              whiteSpace: "nowrap",
+              animation: "ticker 18s linear infinite",
+              alignItems: "center",
+            }}
+          >
+            {[...tickerCities, ...tickerCities, ...tickerCities, ...tickerCities].map((city, i) => (
               <span
                 key={`${city}-${i}`}
-                className="bg-primary-container text-on-primary-fixed px-6 py-2 rounded-full font-semibold text-[14px] uppercase tracking-widest font-[var(--font-inter)]"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  flexShrink: 0,
+                  whiteSpace: "nowrap",
+                }}
               >
-                {city}
+                <span
+                  className="text-on-surface font-black text-[40px] md:text-[56px] uppercase"
+                  style={{
+                    fontFamily: "var(--font-montserrat)",
+                    letterSpacing: "0.12em",
+                    padding: "0 2rem",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {city}
+                </span>
+                <span
+                  className="text-on-surface/50 font-black"
+                  style={{ fontSize: "2rem", flexShrink: 0 }}
+                  aria-hidden="true"
+                >
+                  •
+                </span>
               </span>
             ))}
           </div>

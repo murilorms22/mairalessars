@@ -2,7 +2,7 @@ const purposeCards = [
   {
     icon: "family_restroom",
     title: "Mulheres e maternidade",
-    description: "Apoio integral às mães e políticas de cuidado com a mulher.",
+    description: "Porque cuidar de quem cuida também precisa ser uma prioridade.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuCXCbC3vxCMY2vfrqkOi4SayUtnXhqCwBBRyUCjBGIoBnSx4ammWSv2huDPCqYHBF0emOF3kPSz7oMRWpt9LK2QxV43xsMFY_WbppevhKaKwRa5iNFsZBwi6v80OQKH9o5RWYC3N-diAQLmxRVYzbh6j-xUFF-YyhYDw4VKTpP_K-_Ym2XNzt3n6xEBCLh5tTQGAyuZ8c2BCQEIY9HYffcmlBgaA-0w8yQZMYAMmyIlx0SXifSv4JMWDuL13g98vX_nRLSkmLv_lQek",
     offsetY: false,
@@ -11,7 +11,7 @@ const purposeCards = [
     icon: "health_and_safety",
     title: "Famílias e proteção",
     description:
-      "Estruturas seguras e suporte para o desenvolvimento familiar.",
+      "Porque políticas, projetos e decisões precisam considerar a realidade de quem vive os desafios todos os dias.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuD8CEKR1U8fL9GWcACvjCuv2XcPSH8CrUffOAqkF18W2-4b_YN52Q4NlpswPpnl9YkVCBvaGMwikUSf9L9HsFwSzzfuSh_hedD5q6Hro1ZAw197IVEXMnzNXKQZAKZjRP0EcfSc33g126GsgsaWAcVaq9pDyz7Oaer6740LdscMFTBHes6th2MifxGL69M4uXo3xLCyR9M2ORCpOkKQz_8Nn0iS0T5mc_qxb3AVc9w8sLjDpVC9ks32c74Q8Znpbftg9TDlX2iSVGHr",
     offsetY: true,
@@ -20,7 +20,7 @@ const purposeCards = [
     icon: "location_city",
     title: "Cidades e comunidades",
     description:
-      "Desenvolvimento local focado nas necessidades reais de cada bairro.",
+      "Porque cada município tem suas próprias urgências, histórias e potências.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuA06WXUfczjuPDL2calJ6U83vwN2tG7Pb3wY0JDoHxA-pi6GoNNNINKC5Mp28KQteXlyZriXeJGzSGaO2ry_B9YRG-i8BH34TknxDqo_Fdw3xOY7CzR6dbKnsTPzahoWk1b7oXiwl0mi1h6GNZpx4Zfq1ZIJZfeSMD16wAi7w_Krt82NqRZRlF_nUsdc4oIokbf3X0CE7ypvjjYfYPX_8CyFoTmMHduH6JY6_kCMEzw97ZZxAWxX7n2a_Im_YZm8p60Ks2z38voU_Xd",
     offsetY: false,
@@ -29,7 +29,7 @@ const purposeCards = [
     icon: "hearing",
     title: "Escuta e presença",
     description:
-      "Estar presente para entender as dores antes de propor soluções.",
+      "Porque estar perto das pessoas é o caminho mais honesto para entender o que precisa ser construído.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAuZ-IWi-5PVOE8X9DE9iullTHGgAzHFUHBQ2Wa8bKjS7h-ioKtftp5qmMCZtJ4_sZ8abf6a-QdarZU4B6i2Zd4vMoN0patT-ZsCHfBYoRiHomUMYISn3NME8pPraGEV03-kAPuw4W19Rt9ygsBT6D7ftExsWJkVcmKzocQtRstUCPlBAUMrQm1cXqnuIOSMxHrXenSmwzhZztjVJn2Q9EcdDEU0mA8793TPMzyWbyUpZdHl3jrPSICdg0Rt3ehunO158engPcyT1nV",
     offsetY: false,
@@ -38,7 +38,7 @@ const purposeCards = [
     icon: "agriculture",
     title: "Zona Rural e Agro",
     description:
-      "Valorização de quem produz e alimenta o nosso estado.",
+      "Porque quem produz, trabalha e sustenta o interior também precisa ser ouvido, valorizado e fortalecido.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuCjbKMb-263iY44uKwQiclq-ew7mA5jRYYDVtouf-asleogeQ40On3cS35gnLUp8ggVlKmffcghruQIpQeTFCMWJhYnFjLD__zQACmPD-b7XP0EN18jkmgnckz96MbMThOBvyAkylX_Uo52tJO8lW7eZltQBovphNkM5IyXFPjlK15kOdwaonTUoFlTrZWcS0o-Ceii6VKKhpN9AjzMgY6tnl1qiKyYVy-TUScIKlKUH-3tYQ_rwB5n-0CJoXbGeW7xdMl4XrvcI20B",
     offsetY: true,
@@ -47,7 +47,7 @@ const purposeCards = [
     icon: "diversity_3",
     title: "Inclusão e Desenvolvimento",
     description:
-      "Oportunidades iguais, respeito à diversidade e fomento à economia da Zona Sul.",
+      "Porque uma sociedade justa precisa enxergar todas as pessoas, respeitar diferenças e criar caminhos de acesso.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDovgFipfo7HY-DP-hhaJZ04OVDVhuavfqlBLkk5Ukg2r26ZaN6HPxPeWofWo69zHv15u_S1gAEINdThZNdB_-HpfiPMKjrWNpDgPQRicwkPIRPvAJ3Z_PpBgbOfOvlsZ02nKO5Uker3FAlXTYZJoEXzZIPwucLiWg8tONu2OFAWoYcfxlQXPKgIkrKOAV4pzH_GGXfr1dsEyiytBJEwZC9yg7-q4_gwcTlxEVQ_XjzUW9zHAxoh14Poxm6WgqAn7IxejTrnbBSIP51",
     offsetY: false,
@@ -72,13 +72,13 @@ export default function Proposito() {
               Propósito
             </h2>
             <h3
-              className="text-[48px] md:text-[64px] text-surface-container-lowest leading-[1.1] font-bold"
+              className="text-[48px] md:text-[60px] text-surface-container-lowest leading-[1.1] font-bold"
               style={{ fontFamily: "var(--font-montserrat)" }}
             >
               Pela saúde, inclusão e desenvolvimento do <br />
               <span
-                className="text-primary-container"
-                style={{ fontFamily: "var(--font-syne)" }}
+                className="text-primary-container md:text-[90px]"
+                style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
               >
                 Sul Gaúcho
               </span>
@@ -133,12 +133,18 @@ export default function Proposito() {
             className="text-[36px] md:text-[48px] text-surface-container-lowest leading-tight font-light"
             style={{ fontFamily: "var(--font-montserrat)" }}
           >
-            Maíra acredita que propósito não se declara apenas em palavras.
+            Maíra acredita que{" "}
+            <span className="text-primary-container relative inline-block group">
+              propósito
+              <span className="absolute bottom-2 left-0 w-full h-[30%] bg-primary-container/30 -z-10 group-hover:h-[80%] transition-all duration-500 rounded-sm" />
+            </span>
+            {" "}não se declara apenas em palavras.
+            <br />
             Propósito se mostra na presença, na escuta e na coragem de seguir.
             Na{" "}
             <strong
               className="text-primary-container font-bold text-[48px] md:text-[64px] block mt-4 drop-shadow-[0_0_15px_rgba(163,230,53,0.3)]"
-              style={{ fontFamily: "var(--font-syne)" }}
+              style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
             >
               superAÇÃO
             </strong>

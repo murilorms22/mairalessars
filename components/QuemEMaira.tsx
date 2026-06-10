@@ -23,7 +23,7 @@ export default function QuemEMaira() {
               <br />
               <span
                 className="text-primary-container text-[80px] block mt-2 relative inline-block"
-                style={{ fontFamily: "var(--font-syne)" }}
+                style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
               >
                 Maíra é presença.
                 <svg
