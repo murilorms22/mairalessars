@@ -18,7 +18,7 @@ const images = [
     alt: "Caminhada 2",
   },
   {
-    src: "/optimized/caminhada-3.webp", 
+    src: "/optimized/caminhada-3.webp",
     alt: "Caminhada 3",
   },
   {
@@ -96,7 +96,7 @@ export default function Caminhada() {
             <div className="grid grid-cols-3 gap-4 h-full">
 
               {/* Image 1 — tall portrait, spans 2 rows */}
-              <div className="col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg group"
+              <div className="col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg group relative"
                 style={{ minHeight: "320px" }}>
                 <Image
                   alt={images[0].alt}
@@ -108,7 +108,7 @@ export default function Caminhada() {
               </div>
 
               {/* Image 2 — wide 16:9 top-right */}
-              <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg group aspect-[16/9]">
+              <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg group aspect-[16/9] relative">
                 <Image
                   alt={images[1].alt}
                   className="object-cover transition-all duration-700 group-hover:scale-105"
@@ -119,7 +119,7 @@ export default function Caminhada() {
               </div>
 
               {/* Bottom row: small square + wider landscape */}
-              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square">
+              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square relative">
                 <Image
                   alt={images[2].alt}
                   className="object-cover transition-all duration-700 group-hover:scale-105"
@@ -129,7 +129,7 @@ export default function Caminhada() {
                 />
               </div>
 
-              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square">
+              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square relative">
                 <Image
                   alt={images[3].alt}
                   className="object-cover transition-all duration-700 group-hover:scale-105"

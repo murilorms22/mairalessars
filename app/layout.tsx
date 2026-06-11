@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import ViewportScaler from "@/components/ViewportScaler";
 import "./globals.css";
 
@@ -7,12 +8,22 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "600"],
+  display: "swap",
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["600", "700", "800", "900"],
+  display: "swap",
+});
+
+const materialSymbols = localFont({
+  src: "../public/fonts/material-symbols-outlined.woff2",
+  variable: "--font-material-symbols",
+  display: "block",
+  weight: "100 700",
+  style: "normal",
 });
 
 
@@ -38,20 +49,8 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${montserrat.variable} scroll-smooth`}
+      className={`${inter.variable} ${montserrat.variable} ${materialSymbols.variable} scroll-smooth`}
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className="min-h-full flex flex-col">
         <ViewportScaler />
         {children}
