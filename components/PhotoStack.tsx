@@ -74,17 +74,17 @@ export default function PhotoStack() {
      */
     <div
       ref={wrapperRef}
-      className="relative bg-[#050505]"
+      className="relative bg-[#0a0a0a]"
       style={{
         height: `calc(${images.length * BUDGET}px / var(--vp-zoom) + var(--hero-height))`,
       }}
     >
       {/* CSS sticky — stays on screen while wrapper scrolls past */}
       <div
-        className="sticky top-0 w-full flex flex-col items-center justify-center bg-[#050505]"
+        className="sticky top-0 w-full flex flex-col items-center justify-center bg-[#0a0a0a]"
         style={{ height: "var(--hero-height)" }}
       >
-        <p className="text-white/20 text-[11px] uppercase tracking-[0.25em] mb-12 font-[var(--font-inter)]">
+        <p className="text-white/80 text-[32px] uppercase tracking-[0.5em] mb-20 font-[var(--font-inter)] font-black">
           Momentos da caminhada
         </p>
 
@@ -107,8 +107,8 @@ export default function PhotoStack() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-2 text-white/20 animate-bounce">
-          <span className="text-[11px] uppercase tracking-[0.2em] font-[var(--font-inter)]">
+        <div className="mt-24 flex flex-col items-center gap-2 text-white/20 animate-bounce">
+          <span className="text-[20px] uppercase tracking-[0.2em] font-[var(--font-inter)]">
             role para ver mais
           </span>
           <span className="material-symbols-outlined text-[18px]">south</span>
