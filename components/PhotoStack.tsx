@@ -74,6 +74,7 @@ export default function PhotoStack() {
      * So sticky duration = N * BUDGET screen-px — exactly right.
      */
     <div
+      id="photostack"
       ref={wrapperRef}
       className="relative bg-[#0a0a0a]"
       style={{

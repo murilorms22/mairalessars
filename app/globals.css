@@ -80,6 +80,10 @@
 }
 
 /* ===== BASE STYLES ===== */
+* {
+  cursor: default !important;
+}
+
 :root {
   --vp-zoom: 1;
   --hero-height: 100vh;

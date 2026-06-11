@@ -46,7 +46,7 @@ export default function FinalCTA() {
               </p>
             </div>
             <div className="col-span-12 lg:col-span-5 lg:col-start-8 relative fade-up">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
                 <Image
                   alt="Maíra Lessa"
                   className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
@@ -71,7 +71,7 @@ export default function FinalCTA() {
           {/* Block 2: Image Left, Text Right */}
           <div className="grid grid-cols-12 gap-gutter items-center mb-32">
             <div className="col-span-12 lg:col-span-5 order-2 lg:order-1 relative fade-up">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
                 <Image
                   alt="Maíra Lessa Presence"
                   className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"

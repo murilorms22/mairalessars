@@ -57,19 +57,38 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* Right: Photo + Logo */}
+        {/* Right: Photo + Signature */}
         <div className="hidden relative lg:flex col-span-6 h-full items-end justify-center">
-          {/* Maíra photo — bottom-aligned, full height feel */}
-          <div className="relative z-10 h-[85%] w-full flex justify-center">
-            <Image
-              alt="Maíra Lessa"
-              className="object-contain object-bottom drop-shadow-2xl select-none origin-bottom 2xl:scale-[1.10]"
-              src="/optimized/maira-hero2.webp"
-              fill
-              priority
-              sizes="(max-width: 1024px) 0vw, 50vw"
-              draggable={false}
-            />
+          {/* Maíra photo container */}
+          <div className="relative z-10 h-[95%] w-full flex flex-col items-center justify-end">
+            <div
+              className="absolute inset-0"
+              style={{
+                WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
+                maskImage: "linear-gradient(to bottom, black 65%, transparent 100%)"
+              }}
+            >
+              <Image
+                alt="Maíra Lessa"
+                className="object-contain object-bottom drop-shadow-2xl select-none origin-bottom"
+                src="/optimized/maira-hero3.webp"
+                fill
+                priority
+                sizes="(max-width: 1024px) 0vw, 50vw"
+                draggable={false}
+              />
+            </div>
+
+            {/* Signature over the transparent gradient */}
+            <div className="relative z-20 w-[100%] max-w-[700px] aspect-[2/1] mb-24 drop-shadow-xl">
+              <Image
+                src="/optimized/maira-ass.webp"
+                alt="Assinatura Maíra Lessa"
+                fill
+                className="object-contain object-center"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
