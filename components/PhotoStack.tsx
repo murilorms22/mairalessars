@@ -3,21 +3,22 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-  { src: "/carrossel-1.jpeg", rotate: "-6deg" },
-  { src: "/carrossel-2.jpeg", rotate: "4deg" },
-  { src: "/carrossel-3.jpeg", rotate: "-3deg" },
-  { src: "/carrossel-4.jpeg", rotate: "7deg" },
-  { src: "/carrossel-5.jpeg", rotate: "-5deg" },
-  { src: "/carrossel-6.jpeg", rotate: "3deg" },
-  { src: "/carrossel-7.jpeg", rotate: "-8deg" },
-  { src: "/carrossel-8.jpeg", rotate: "5deg" },
-  { src: "/carrossel-9.jpeg", rotate: "-4deg" },
-  { src: "/carrossel-10.jpeg", rotate: "6deg" },
-  { src: "/carrossel-11.jpeg", rotate: "-2deg" },
+  { src: "/optimized/carrossel-1.webp", rotate: "-6deg" },
+  { src: "/optimized/carrossel-2.webp", rotate: "4deg" },
+  { src: "/optimized/carrossel-3.webp", rotate: "-3deg" },
+  { src: "/optimized/carrossel-4.webp", rotate: "7deg" },
+  { src: "/optimized/carrossel-5.webp", rotate: "-5deg" },
+  { src: "/optimized/carrossel-6.webp", rotate: "3deg" },
+  { src: "/optimized/carrossel-7.webp", rotate: "-8deg" },
+  { src: "/optimized/carrossel-8.webp", rotate: "5deg" },
+  { src: "/optimized/carrossel-9.webp", rotate: "-4deg" },
+  { src: "/optimized/carrossel-10.webp", rotate: "6deg" },
+  { src: "/optimized/carrossel-11.webp", rotate: "-2deg" },
 ];
 
 // How many screen-px of scroll each card gets
@@ -97,10 +98,12 @@ export default function PhotoStack() {
               className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl border-[5px] border-white"
               style={{ rotate: img.rotate, zIndex: i + 1 }}
             >
-              <img
+              <Image
                 src={img.src}
                 alt={`Foto ${i + 1}`}
-                className="w-full h-full object-cover"
+                className="object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 450px"
                 draggable={false}
               />
             </div>

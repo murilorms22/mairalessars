@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = [
   { href: "#inicio", label: "Início" },
@@ -21,11 +22,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
           {/* Brand logo */}
           <Link href="#inicio" className="shrink-0 hover:opacity-80 transition-opacity duration-300">
-            <img
-              src="/maira-logo.png"
-              alt="Maíra Lessa"
-              className="h-36 w-auto object-contain"
-            />
+            <div className="relative h-36 w-[300px]">
+              <Image
+                src="/optimized/maira-logo.webp"
+                alt="Maíra Lessa"
+                className="object-contain object-left"
+                fill
+                sizes="300px"
+              />
+            </div>
           </Link>
 
           {/* Nav links */}

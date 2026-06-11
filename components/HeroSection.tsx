@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
     <header
@@ -6,10 +8,13 @@ export default function HeroSection() {
     >
       {/* Checkered background */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           alt="Background"
-          className="w-full h-full object-cover object-center"
-          src="/background-hero.png"
+          className="object-cover object-center"
+          src="/optimized/background-hero.webp"
+          fill
+          priority
+          sizes="100vw"
         />
       </div>
 
@@ -55,12 +60,17 @@ export default function HeroSection() {
         {/* Right: Photo + Logo */}
         <div className="hidden relative lg:flex col-span-6 h-full items-end justify-center">
           {/* Maíra photo — bottom-aligned, full height feel */}
-          <img
-            alt="Maíra Lessa"
-            className="relative z-10 h-[85%] w-auto max-w-none object-contain object-bottom drop-shadow-2xl select-none origin-bottom 2xl:scale-[1.10]"
-            src="/maira-hero2.png"
-            draggable={false}
-          />
+          <div className="relative z-10 h-[85%] w-full flex justify-center">
+            <Image
+              alt="Maíra Lessa"
+              className="object-contain object-bottom drop-shadow-2xl select-none origin-bottom 2xl:scale-[1.10]"
+              src="/optimized/maira-hero2.webp"
+              fill
+              priority
+              sizes="(max-width: 1024px) 0vw, 50vw"
+              draggable={false}
+            />
+          </div>
         </div>
       </div>
     </header>

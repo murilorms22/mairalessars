@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 const purposeCards = [
   {
     icon: "family_restroom",
     title: "Mulheres e maternidade",
     description: "Porque cuidar de quem cuida também precisa ser uma prioridade.",
     image:
-      "/proposito-maternidade.jpeg",
+      "/optimized/proposito-maternidade.webp",
     offsetY: false,
   },
   {
@@ -13,7 +15,7 @@ const purposeCards = [
     description:
       "Porque políticas, projetos e decisões precisam considerar a realidade de quem vive os desafios todos os dias.",
     image:
-      "/proposito-familia.jpeg",
+      "/optimized/proposito-familia.webp",
     offsetY: true,
   },
   {
@@ -22,7 +24,7 @@ const purposeCards = [
     description:
       "Porque cada município tem suas próprias urgências, histórias e potências.",
     image:
-      "/proposito-cidades.jpeg",
+      "/optimized/proposito-cidades.webp",
     offsetY: false,
   },
   {
@@ -31,7 +33,7 @@ const purposeCards = [
     description:
       "Porque estar perto das pessoas é o caminho mais honesto para entender o que precisa ser construído.",
     image:
-      "/proposito-escuta.jpeg",
+      "/optimized/proposito-escuta.webp",
     offsetY: false,
   },
   {
@@ -40,7 +42,7 @@ const purposeCards = [
     description:
       "Porque quem produz, trabalha e sustenta o interior também precisa ser ouvido, valorizado e fortalecido.",
     image:
-      "/proposito-agro.jpeg",
+      "/optimized/proposito-agro.webp",
     offsetY: true,
   },
   {
@@ -49,7 +51,7 @@ const purposeCards = [
     description:
       "Porque uma sociedade justa precisa enxergar todas as pessoas, respeitar diferenças e criar caminhos de acesso.",
     image:
-      "/proposito-inclusao.jpeg",
+      "/optimized/proposito-inclusao.webp",
     offsetY: false,
   },
 ];
@@ -101,10 +103,12 @@ export default function Proposito() {
               className={`group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer ${card.offsetY ? "lg:translate-y-12" : ""
                 }`}
             >
-              <img
+              <Image
                 alt={card.title}
-                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 ease-in-out"
                 src={card.image}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end">

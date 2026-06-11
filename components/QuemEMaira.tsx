@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function QuemEMaira() {
   return (
     <section
@@ -57,10 +59,12 @@ export default function QuemEMaira() {
           {/* Main Image */}
           <div className="col-span-12 lg:col-span-6 z-20 fade-up">
             <div className="aspect-[3/4] bg-surface-dim relative overflow-hidden rounded-3xl shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] group">
-              <img
+              <Image
                 alt="Maíra Lessa Portrait"
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                src="/jornada.jpeg"
+                className="object-cover transition-all duration-700 group-hover:scale-105"
+                src="/optimized/jornada.webp"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>

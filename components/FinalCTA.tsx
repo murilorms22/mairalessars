@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function FinalCTA() {
   return (
     <section
@@ -6,10 +8,12 @@ export default function FinalCTA() {
     >
       {/* Immersive Background */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           alt="CTA Background"
-          className="w-full h-full grayscale object-cover opacity-[0.1] mix-blend-luminosity scale-110"
+          className="grayscale object-cover opacity-[0.1] mix-blend-luminosity scale-110"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUaUANLi-4XBSZYNh1FcS1mx3x2pZdbiELMweB2U_Lc3FRJ23qiYzYSU6GZb_cD3oPOWqoUMDj5sM6Zj1nSV4VaOQeZwP-Ju3zP-4dDzvMSHOxyh9GHMPR_0D6zyfUo7AeSwUdh-oHjMAwZhadA5Q86J8pnMmkeOHQ5-ifmN_N47YMzAKOLys-M1RwZGo6UsyCXH5nYjk3ctoHmnDh4Y4jCuywnzL12_BMIrIdC1atbZGbFyHkAzyizX5sKVwC2-tI-pamLYOZJfsc"
+          fill
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
       </div>
@@ -43,18 +47,22 @@ export default function FinalCTA() {
             </div>
             <div className="col-span-12 lg:col-span-5 lg:col-start-8 relative fade-up">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img
+                <Image
                   alt="Maíra Lessa"
-                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
-                  src="/final-1.jpeg"
+                  className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                  src="/optimized/final-1.webp"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               {/* Small Accent Image */}
               <div className="absolute -bottom-10 -left-10 w-36 h-36 rounded-2xl overflow-hidden border-4 border-[#050505] shadow-2xl z-20 rotate-[-6deg] hidden md:block">
-                <img
+                <Image
                   alt="Detail"
-                  className="w-full h-full object-cover"
-                  src="/final-extra.jpeg"
+                  className="object-cover"
+                  src="/optimized/final-extra.webp"
+                  fill
+                  sizes="144px"
                 />
               </div>
             </div>
@@ -64,10 +72,12 @@ export default function FinalCTA() {
           <div className="grid grid-cols-12 gap-gutter items-center mb-32">
             <div className="col-span-12 lg:col-span-5 order-2 lg:order-1 relative fade-up">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img
+                <Image
                   alt="Maíra Lessa Presence"
-                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
-                  src="/final-2.jpeg"
+                  className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                  src="/optimized/final-2.webp"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               {/* Floating Glow Accent */}

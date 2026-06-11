@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const tickerCities = [
   "Pelotas",
   "Canguçu",
@@ -8,19 +10,19 @@ const tickerCities = [
 
 const images = [
   {
-    src: "/caminhada-1.jpeg",
+    src: "/optimized/caminhada-1.webp",
     alt: "Caminhada 1",
   },
   {
-    src: "/caminhada-2.jpeg",
+    src: "/optimized/caminhada-2.webp",
     alt: "Caminhada 2",
   },
   {
-    src: "/caminhada-3.jpeg", 
+    src: "/optimized/caminhada-3.webp", 
     alt: "Caminhada 3",
   },
   {
-    src: "/caminhada-4.jpeg",
+    src: "/optimized/caminhada-4.webp",
     alt: "Caminhada 4",
   },
 ];
@@ -96,36 +98,44 @@ export default function Caminhada() {
               {/* Image 1 — tall portrait, spans 2 rows */}
               <div className="col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg group"
                 style={{ minHeight: "320px" }}>
-                <img
+                <Image
                   alt={images[0].alt}
-                  className="w-full h-full object-cover  transition-all duration-700 group-hover:scale-105"
+                  className="object-cover transition-all duration-700 group-hover:scale-105"
                   src={images[0].src}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
                 />
               </div>
 
               {/* Image 2 — wide 16:9 top-right */}
               <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg group aspect-[16/9]">
-                <img
+                <Image
                   alt={images[1].alt}
-                  className="w-full h-full object-cover  transition-all duration-700 group-hover:scale-105"
+                  className="object-cover transition-all duration-700 group-hover:scale-105"
                   src={images[1].src}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 66vw"
                 />
               </div>
 
               {/* Bottom row: small square + wider landscape */}
               <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square">
-                <img
+                <Image
                   alt={images[2].alt}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                  className="object-cover transition-all duration-700 group-hover:scale-105"
                   src={images[2].src}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 33vw"
                 />
               </div>
 
               <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square">
-                <img
+                <Image
                   alt={images[3].alt}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                  className="object-cover transition-all duration-700 group-hover:scale-105"
                   src={images[3].src}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 33vw"
                 />
               </div>
 
