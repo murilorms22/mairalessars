@@ -1,7 +1,7 @@
 export default function HeroSection() {
   return (
     <header
-      className="relative w-full min-h-[100vh] flex items-center overflow-hidden bg-white pt-24"
+      className="relative w-full min-h-dvh h-[calc(100dvh/var(--vp-zoom))] flex items-center overflow-hidden bg-white pt-24"
       id="inicio"
     >
       {/* Checkered background */}
@@ -14,7 +14,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content grid */}
-      <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter items-center min-h-screen">
+      <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter items-center h-full">
 
         {/* Left: Text */}
         <div className="col-span-12 lg:col-span-6 fade-up py-16 lg:py-0">
@@ -53,11 +53,11 @@ export default function HeroSection() {
         </div>
 
         {/* Right: Photo + Logo */}
-        <div className="hidden relative lg:flex col-span-6 h-full min-h-screen items-end justify-center">
+        <div className="hidden relative lg:flex col-span-6 h-full items-end justify-center">
           {/* Maíra photo — bottom-aligned, full height feel */}
           <img
             alt="Maíra Lessa"
-            className="relative z-10 h-full w-auto object-contain object-bottom drop-shadow-2xl select-none"
+            className="relative z-10 h-[85%] w-auto max-w-none object-contain object-bottom drop-shadow-2xl select-none origin-bottom 2xl:scale-[1.10]"
             src="/maira-hero2.png"
             draggable={false}
           />

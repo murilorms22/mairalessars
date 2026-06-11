@@ -1,0 +1,223 @@
+/* Sora Font Family */
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MUX Studio Design System - Premium High-Tech Aesthetic */
+
+@layer base {
+  :root {
+    /* Rich Black Background - NOT absolute black */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+
+    /* Card surfaces with glassmorphism */
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Fire Gradient Colors */
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Orange accent */
+    --accent-orange: 24 100% 50%;
+    /* Red accent */
+    --accent-red: 9 100% 50%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 24 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-fire: linear-gradient(135deg, hsl(24, 100%, 50%) 0%, hsl(9, 100%, 50%) 100%);
+    --gradient-fire-vertical: linear-gradient(180deg, hsl(24, 100%, 50%) 0%, hsl(9, 100%, 50%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(24 100% 50% / 0.3) 0%, transparent 70%);
+    
+    /* Glass effect */
+    --glass-bg: hsl(0 0% 8% / 0.6);
+    --glass-border: hsl(0 0% 100% / 0.08);
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(24 100% 50% / 0.3);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
+  }
+
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 24 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Zoom responsivo para telas menores que 2xl (1536px) */
+@media (min-width: 1024px) and (max-width: 1535px) {
+  html {
+    zoom: 0.8;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-fire);
+  }
+
+  .gradient-bg {
+    background-image: var(--gradient-fire);
+  }
+
+  .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+  }
+
+  /* Habilitar backdrop-filter apenas em telas maiores para melhor performance no mobile */
+  @media (min-width: 768px) {
+    .glass-card {
+      backdrop-filter: blur(12px);
+    }
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-fire {
+    @apply relative overflow-hidden px-8 py-4 font-semibold rounded-lg transition-all duration-300;
+    background-image: var(--gradient-fire);
+    box-shadow: 0 4px 20px hsl(24 100% 50% / 0.4);
+  }
+
+  .btn-fire:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px hsl(24 100% 50% / 0.5);
+  }
+
+  .btn-outline-fire {
+    @apply relative px-8 py-4 font-semibold rounded-lg transition-all duration-300;
+    background: transparent;
+    border: 1px solid hsl(24, 100%, 50%);
+    color: hsl(24, 100%, 50%);
+  }
+
+  .btn-outline-fire:hover {
+    background: hsl(24 100% 50% / 0.1);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

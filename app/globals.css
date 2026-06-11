@@ -66,8 +66,15 @@
 
 /* ===== BASE STYLES ===== */
 :root {
-  --vp-zoom: 0.8;
+  --vp-zoom: 1;
   --hero-height: 100vh;
+}
+
+/* Zoom responsivo para telas menores que 2xl (1536px), baseado no MUXSTUDIO */
+@media (min-width: 1024px) and (max-width: 1535px) {
+  :root {
+    --vp-zoom: 0.8;
+  }
 }
 
 html {
