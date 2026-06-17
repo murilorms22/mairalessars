@@ -1,123 +1,121 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-gsap.registerPlugin(ScrollTrigger);
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import required modules
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 const images = [
-  { src: "/optimized/carrossel-1.webp", rotate: "-6deg" },
-  { src: "/optimized/carrossel-2.webp", rotate: "4deg" },
-  { src: "/optimized/carrossel-3.webp", rotate: "-3deg" },
-  { src: "/optimized/carrossel-4.webp", rotate: "7deg" },
-  { src: "/optimized/carrossel-5.webp", rotate: "-5deg" },
-  { src: "/optimized/carrossel-6.webp", rotate: "3deg" },
-  { src: "/optimized/carrossel-7.webp", rotate: "-8deg" },
-  { src: "/optimized/carrossel-8.webp", rotate: "5deg" },
-  { src: "/optimized/carrossel-9.webp", rotate: "-4deg" },
-  { src: "/optimized/carrossel-10.webp", rotate: "6deg" },
-  { src: "/optimized/carrossel-11.webp", rotate: "-2deg" },
+  "/optimized/carrossel-1.webp",
+  "/optimized/carrossel-2.webp",
+  "/optimized/carrossel-3.webp",
+  "/optimized/carrossel-4.webp",
+  "/optimized/carrossel-5.webp",
+  "/optimized/carrossel-6.webp",
+  "/optimized/carrossel-7.webp",
+  "/optimized/carrossel-8.webp",
+  "/optimized/carrossel-9.webp",
+  "/optimized/carrossel-10.webp",
+  "/optimized/carrossel-11.webp",
 ];
 
-// How many screen-px of scroll each card gets
-const BUDGET = 300;
-
 export default function PhotoStack() {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const wrapper = wrapperRef.current;
-    const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
-    if (!wrapper || !cards.length) return;
-
-    // All cards start off-screen to the right
-    gsap.set(cards, { x: 600, opacity: 0 });
-
-    // Timeline: each card flies in sequentially, scrubbed by scroll.
-    // We use CSS sticky for locking (not GSAP pin) to avoid zoom/fixed-width issues.
-    // GSAP drives the animation from "top top" to "bottom bottom" of the wrapper.
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: wrapper,
-        start: "top top",
-        endTrigger: wrapper,
-        end: "bottom bottom",
-        scrub: 1.5,
-      },
-    });
-
-    cards.forEach((card, i) => {
-      tl.to(
-        card,
-        { x: 0, opacity: 1, ease: "power3.out", duration: 1 },
-        i
-      );
-    });
-
-    return () => {
-      tl.kill();
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
-
   return (
-    /*
-     * Wrapper height formula (body CSS px):
-     *   N * BUDGET / zoom + var(--hero-height)
-     *
-     * When rendered on screen:
-     *   (N * BUDGET / zoom + vh/zoom) * zoom = N * BUDGET + vh
-     *
-     * So sticky duration = N * BUDGET screen-px — exactly right.
-     */
-    <div
-      id="photostack"
-      ref={wrapperRef}
-      className="relative bg-[#0a0a0a]"
-      style={{
-        height: `calc(${images.length * BUDGET}px / var(--vp-zoom) + var(--hero-height))`,
-      }}
-    >
-      {/* CSS sticky — stays on screen while wrapper scrolls past */}
-      <div
-        className="sticky top-0 w-full flex flex-col items-center justify-center bg-[#0a0a0a]"
-        style={{ height: "var(--hero-height)" }}
-      >
-        <p className="text-white/80 text-[32px] uppercase tracking-[0.5em] mb-20 font-[var(--font-inter)] font-black">
-          Momentos da caminhada
-        </p>
+    <div className="w-full bg-[#0a0a0a] py-24 flex flex-col items-center justify-center overflow-hidden">
+      <p className="text-white/80 text-[24px] md:text-[32px] uppercase tracking-[0.3em] md:tracking-[0.5em] mb-16 font-[var(--font-inter)] font-black text-center px-4">
+        Momentos da caminhada
+      </p>
 
-        {/* Stack — all cards absolutely on top of each other */}
-        <div className="relative" style={{ width: 450, height: 550 }}>
-          {images.map((img, i) => (
-            <div
-              key={img.src}
-              ref={(el) => { cardsRef.current[i] = el; }}
-              className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl border-[5px] border-white"
-              style={{ rotate: img.rotate, zIndex: i + 1 }}
+      <div className="w-full max-w-7xl relative group overflow-hidden px-0">
+        <button className="swiper-prev-btn absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-20 bg-black/60 text-white p-3 md:p-4 rounded-full hover:bg-black/90 transition-all opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center backdrop-blur-md border border-white/10">
+          <span className="material-symbols-outlined text-2xl md:text-3xl">chevron_left</span>
+        </button>
+        <button className="swiper-next-btn absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-20 bg-black/60 text-white p-3 md:p-4 rounded-full hover:bg-black/90 transition-all opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center backdrop-blur-md border border-white/10">
+          <span className="material-symbols-outlined text-2xl md:text-3xl">chevron_right</span>
+        </button>
+
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          initialSlide={3}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: -20,
+            depth: 150,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          navigation={{
+            nextEl: '.swiper-next-btn',
+            prevEl: '.swiper-prev-btn',
+          }}
+          pagination={{ clickable: true, dynamicBullets: true }}
+          modules={[EffectCoverflow, Navigation, Pagination]}
+          className="w-full pb-20 pt-8"
+        >
+          {images.map((src, index) => (
+            <SwiperSlide
+              key={index}
+              className="relative rounded-xl overflow-hidden shadow-2xl border border-white/20 bg-black"
             >
               <Image
-                src={img.src}
-                alt={`Foto ${i + 1}`}
+                src={src}
+                alt={`Foto ${index + 1}`}
                 className="object-cover"
                 fill
-                sizes="(max-width: 768px) 100vw, 450px"
+                sizes="(max-width: 768px) 260px, 320px"
                 draggable={false}
               />
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
-
-        <div className="mt-24 flex flex-col items-center gap-2 text-white/20 animate-bounce">
-          <span className="text-[20px] uppercase tracking-[0.2em] font-[var(--font-inter)]">
-            role para ver mais
-          </span>
-          <span className="material-symbols-outlined text-[18px]">south</span>
-        </div>
+        </Swiper>
       </div>
+
+      <style jsx global>{`
+        /* FORÇA o tamanho dos slides para que NUNCA fiquem 100vw independentemente do Javascript do Swiper */
+        .swiper-slide {
+          width: 260px !important;
+          height: 325px !important;
+          opacity: 1 !important;
+          filter: brightness(0.3);
+          transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease !important;
+        }
+        @media (min-width: 768px) {
+          .swiper-slide {
+            width: 400px !important;
+            height: 500px !important;
+          }
+        }
+        
+        /* Torna os slides ativos claros e em evidência, sem filtros */
+        .swiper-slide-active {
+          filter: brightness(1);
+        }
+
+        /* Transforma a paginação em elemento de bloco relativo, garantindo que não seja cortada pelo overflow do carrossel e fique perfeitamente alinhada abaixo das imagens */
+        .swiper-pagination {
+          position: relative !important;
+          margin-top: 1rem !important;
+          bottom: 0 !important;
+        }
+
+        .swiper-pagination-bullet {
+          background: #fff !important;
+          opacity: 0.3;
+        }
+        .swiper-pagination-bullet-active {
+          opacity: 1 !important;
+        }
+      `}</style>
     </div>
   );
 }

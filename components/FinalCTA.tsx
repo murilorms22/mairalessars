@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { text } from "stream/consumers";
 
 export default function FinalCTA() {
   return (
@@ -39,10 +40,9 @@ export default function FinalCTA() {
           {/* Block 1: Text Left, Image Right */}
           <div className="grid grid-cols-12 gap-gutter items-center mb-32">
             <div className="col-span-12 lg:col-span-6 dark-glass p-10 rounded-[40px] border border-white/5 fade-up">
-              <p className="text-[22px] text-surface-variant/90 leading-relaxed font-[var(--font-inter)]">
-                A história da Maíra é feita de comunicação, maternidade e
-                coragem. Mas essa caminhada não é sobre uma pessoa só. É sobre
-                transformar vivências em movimento.
+              <p className="text-[20px] md:text-[22px] text-surface-variant/90 leading-relaxed font-[var(--font-inter)]">
+                A história da Maíra é feita de comunicação, maternidade, desafios, escuta e coragem.
+                Mas essa caminhada não é sobre uma pessoa só. <br />
               </p>
             </div>
             <div className="col-span-12 lg:col-span-5 lg:col-start-8 relative fade-up">
@@ -83,10 +83,14 @@ export default function FinalCTA() {
               {/* Floating Glow Accent */}
               <div className="absolute top-1/2 -right-10 w-40 h-40 bg-primary-container/20 rounded-full blur-3xl animate-pulse -z-10" />
             </div>
-            <div className="col-span-12 lg:col-span-6 lg:col-start-7 order-1 lg:order-2 dark-glass p-10 rounded-[40px] border border-white/5 fade-up">
-              <p className="text-[22px] text-surface-variant/90 leading-relaxed font-[var(--font-inter)]">
-                É sobre construir, com responsabilidade, um futuro mais próximo
-                das pessoas, onde cada voz é ouvida e cada história importa.
+            <div className="col-span-12 lg:col-span-8 lg:col-start-7 order-1 lg:order-2 dark-glass p-10 rounded-[40px] border border-white/5 fade-up">
+              <p className="text-[20px] md:text-[20px] text-surface-variant/90 leading-relaxed font-[var(--font-inter)]">
+                É sobre <span style={{ color: "var(--color-primary-container)" }}><b>todas as mulheres</b></span> que precisaram ser fortes antes mesmo de estarem prontas.<br />
+                É sobre <span style={{ color: "var(--color-primary-container)" }}><b>famílias</b></span> que merecem ser vistas.<br />
+                É sobre <span style={{ color: "var(--color-primary-container)" }}><b>cidades</b></span> que precisam ser ouvidas. <br />
+                É sobre <span style={{ color: "var(--color-primary-container)" }}><b>transformar</b></span> vivências em movimento.<br />
+                É sobre construir, com responsabilidade, um futuro mais próximo das <span style={{ color: "var(--color-primary-container)" }}><b>pessoas</b></span>.
+
               </p>
             </div>
           </div>
