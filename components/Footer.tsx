@@ -19,10 +19,10 @@ export default function Footer() {
     <footer className="bg-surface-container-low text-secondary relative z-20 border-t border-surface-variant/10">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-10 font-[var(--font-inter)]">
         {/* Top row: brand + nav */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
+        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start gap-12 mb-12 text-center md:text-left">
           {/* Brand logo */}
           <Link href="#inicio" className="shrink-0 hover:opacity-80 transition-opacity duration-300">
-            <div className="relative h-36 w-[300px]">
+            <div className="relative h-36 w-[300px] mx-auto md:mx-0">
               <Image
                 src="/optimized/maira-logo.webp"
                 alt="Maíra Lessa"
@@ -34,7 +34,7 @@ export default function Footer() {
           </Link>
 
           {/* Nav links */}
-          <nav className="flex flex-col flex-wrap my-auto gap-x-10 gap-y-4 justify-start md:justify-end">
+          <nav className="flex flex-col flex-wrap my-auto gap-x-10 gap-y-4 justify-center md:justify-end items-center md:items-end w-full md:w-auto">
             {footerLinks.map((link) => (
               <Link
                 key={link.label}

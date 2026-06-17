@@ -6,17 +6,7 @@ export default function HeroSection() {
       className="relative w-full min-h-dvh h-[calc(100dvh/var(--vp-zoom))] flex items-center overflow-hidden bg-white pt-24"
       id="inicio"
     >
-      {/* Checkered background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          alt="Background"
-          className="object-cover object-center"
-          src="/optimized/background-hero.webp"
-          fill
-          priority
-          sizes="100vw"
-        />
-      </div>
+
 
       {/* Content grid */}
       <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter items-center h-full">
@@ -74,7 +64,7 @@ export default function HeroSection() {
                 src="/optimized/maira-hero3.webp"
                 fill
                 priority
-                sizes="(max-width: 1024px) 0vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 draggable={false}
               />
             </div>

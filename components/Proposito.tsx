@@ -5,54 +5,57 @@ const purposeCards = [
     icon: "family_restroom",
     title: "Mulheres e maternidade",
     description: "Porque cuidar de quem cuida também precisa ser uma prioridade.",
-    image:
-      "/optimized/proposito-maternidade.webp",
+    image: "/optimized/proposito-maternidade.webp",
     offsetY: false,
   },
   {
     icon: "health_and_safety",
     title: "Famílias e proteção",
-    description:
-      "Porque políticas, projetos e decisões precisam considerar a realidade de quem vive os desafios todos os dias.",
-    image:
-      "/optimized/proposito-familia.webp",
+    description: "Porque políticas, projetos e decisões precisam considerar a realidade de quem vive os desafios todos os dias.",
+    image: "/optimized/proposito-familia.webp",
     offsetY: true,
   },
   {
     icon: "location_city",
     title: "Cidades e comunidades",
-    description:
-      "Porque cada município tem suas próprias urgências, histórias e potências.",
-    image:
-      "/optimized/proposito-cidades.webp",
+    description: "Porque cada município tem suas próprias urgências, histórias e potências.",
+    image: "/optimized/proposito-cidades.webp",
     offsetY: false,
   },
   {
     icon: "hearing",
     title: "Escuta e presença",
-    description:
-      "Porque estar perto das pessoas é o caminho mais honesto para entender o que precisa ser construído.",
-    image:
-      "/optimized/proposito-escuta.webp",
+    description: "Porque estar perto das pessoas é o caminho mais honesto para entender o que precisa ser construído.",
+    image: "/optimized/proposito-escuta.webp",
     offsetY: false,
+  },
+  {
+    icon: "campaign",
+    title: "Comunicação com responsabilidade",
+    description: "Porque falar com clareza, verdade e sensibilidade também é uma forma de servir.",
+    image: "/optimized/carrossel-11.webp",
+    offsetY: true,
   },
   {
     icon: "agriculture",
     title: "Zona Rural e Agro",
-    description:
-      "Porque quem produz, trabalha e sustenta o interior também precisa ser ouvido, valorizado e fortalecido.",
-    image:
-      "/optimized/proposito-agro.webp",
-    offsetY: true,
+    description: "Porque quem produz, trabalha e sustenta o interior também precisa ser ouvido, valorizado e fortalecido.",
+    image: "/optimized/proposito-agro.webp",
+    offsetY: false,
   },
   {
     icon: "diversity_3",
-    title: "Inclusão e Desenvolvimento",
-    description:
-      "Porque uma sociedade justa precisa enxergar todas as pessoas, respeitar diferenças e criar caminhos de acesso.",
-    image:
-      "/optimized/proposito-inclusao.webp",
+    title: "Inclusão",
+    description: "Porque uma sociedade justa precisa enxergar todas as pessoas, respeitar diferenças e criar caminhos de acesso.",
+    image: "/optimized/proposito-inclusao.webp",
     offsetY: false,
+  },
+  {
+    icon: "trending_up",
+    title: "Desenvolvimento da Zona Sul",
+    description: "Porque a nossa região tem força, potencial e histórias que precisam sair do discurso e virar prioridade.",
+    image: "/optimized/carrossel-6.webp",
+    offsetY: true,
   },
 ];
 
@@ -74,12 +77,12 @@ export default function Proposito() {
               Propósito
             </h2>
             <h3
-              className="text-[48px] md:text-[60px] text-surface-container-lowest leading-[1.1] font-bold"
+              className="text-[36px] md:text-[48px] lg:text-[60px] text-surface-container-lowest leading-[1.1] font-bold"
               style={{ fontFamily: "var(--font-montserrat)" }}
             >
               Pela saúde, inclusão e desenvolvimento do <br />
               <span
-                className="text-primary-container md:text-[90px]"
+                className="text-primary-container text-[48px] md:text-[72px] lg:text-[90px]"
                 style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
               >
                 Sul Gaúcho
@@ -118,14 +121,14 @@ export default function Proposito() {
                   </span>
                 </div>
                 <h4
-                  className="text-[28px] text-white font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out"
+                  className="text-[28px] text-white font-bold mb-2 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 ease-out"
                   style={{ fontFamily: "var(--font-montserrat)" }}
                 >
                   {card.title}
                 </h4>
-                {/* Description slides up from below — clip provided by parent overflow-hidden */}
+                {/* Description slides up from below on PC, always visible on mobile */}
                 <div className="overflow-hidden">
-                  <p className="text-surface-variant/80 text-[15px] leading-relaxed translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-75 pt-2">
+                  <p className="text-surface-variant/80 text-[15px] leading-relaxed translate-y-0 opacity-100 md:translate-y-full md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out delay-75 pt-2">
                     {card.description}
                   </p>
                 </div>

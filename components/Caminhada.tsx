@@ -119,7 +119,7 @@ export default function Caminhada() {
               </div>
 
               {/* Bottom row: small square + wider landscape */}
-              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square relative">
+              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-[4/5] md:aspect-square relative">
                 <Image
                   alt={images[2].alt}
                   className="object-cover transition-all duration-700 group-hover:scale-105"
@@ -129,7 +129,7 @@ export default function Caminhada() {
                 />
               </div>
 
-              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-square relative">
+              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-[4/5] md:aspect-square relative">
                 <Image
                   alt={images[3].alt}
                   className="object-cover transition-all duration-700 group-hover:scale-105"

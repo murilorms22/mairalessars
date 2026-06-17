@@ -52,8 +52,21 @@ export default function RootLayout({
       className={`${inter.variable} ${montserrat.variable} ${materialSymbols.variable} scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
+        <div id="landscape-blocker" className="hidden fixed inset-0 z-[9999] bg-[#050505] flex-col items-center justify-center text-center p-8 text-white">
+          <span className="material-symbols-outlined text-[64px] mb-6 animate-pulse text-primary-container">
+            screen_rotation
+          </span>
+          <h2 className="text-2xl font-bold mb-4 font-[var(--font-montserrat)]">
+            Vire seu celular
+          </h2>
+          <p className="text-surface-variant font-[var(--font-inter)] text-lg">
+            Para a melhor experiência, por favor use o site na vertical (modo retrato).
+          </p>
+        </div>
         <ViewportScaler />
-        {children}
+        <div id="main-content" className="flex flex-col min-h-screen w-full">
+          {children}
+        </div>
       </body>
     </html>
   );

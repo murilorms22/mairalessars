@@ -11,20 +11,20 @@ export default function QuemEMaira() {
 
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
         {/* Header Row */}
-        <div className="grid grid-cols-12 gap-gutter items-center mb-32">
+        <div className="grid grid-cols-12 gap-gutter items-center mb-12 md:mb-32">
           <div className="col-span-12 lg:col-span-5 fade-up">
             <h2 className="text-[14px] font-semibold uppercase text-secondary tracking-widest mb-6 flex items-center gap-4 font-[var(--font-inter)]">
               <span className="w-16 h-px bg-primary-container inline-block" />
               A Jornada
             </h2>
             <h3
-              className="text-[56px] text-on-surface mb-8 leading-[1.1] font-bold"
+              className="text-[36px] md:text-[56px] text-on-surface mb-8 leading-[1.1] font-bold"
               style={{ fontFamily: "var(--font-montserrat)" }}
             >
               Antes de qualquer título,
               <br />
               <span
-                className="text-primary-container text-[80px] block mt-2 relative inline-block"
+                className="text-primary-container text-[48px] md:text-[80px] block mt-2 relative inline-block"
                 style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
               >
                 Maíra é presença.
@@ -71,7 +71,7 @@ export default function QuemEMaira() {
           </div>
 
           {/* Overlapping Text Card */}
-          <div className="col-span-12 lg:col-span-6 lg:-ml-24 z-30 mt-12 lg:mt-32 fade-up relative">
+          <div className="col-span-12 lg:col-span-6 lg:-ml-24 z-30 mt-6 lg:mt-32 fade-up relative">
             <div className="bg-surface-container-lowest/90 backdrop-blur-xl p-10 lg:p-16 rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-surface-variant/50 relative">
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary-container rounded-full mix-blend-multiply opacity-20 blur-2xl z-0" />
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "#inicio", id: "inicio", label: "Início" },
@@ -16,6 +16,7 @@ const navLinks = [
 export default function TopNavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -158,12 +159,75 @@ export default function TopNavBar() {
 
         {/* Mobile: only hamburger icon */}
         <button
-          className="md:hidden text-[#282726] p-2 hover:text-primary-container transition-colors"
+          className="md:hidden text-[#282726] p-2 hover:text-primary-container transition-colors z-[60]"
           aria-label="Toggle menu"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <span className="material-symbols-outlined">menu</span>
+          <span className="material-symbols-outlined">
+            {isMobileMenuOpen ? "close" : "menu"}
+          </span>
         </button>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center pt-20"
+          >
+            <div className="flex flex-col items-center gap-8 w-full px-6">
+              {navLinks.map((link) => {
+                const isActive = link.id && activeSection === link.id;
+
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`relative text-[20px] font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
+                      isActive
+                        ? "scale-110 text-primary-container"
+                        : "scale-100 text-[#282726]"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+              
+              {/* Instagram Icon Mobile */}
+              <Link
+                href="https://instagram.com/mairalessars"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[#282726] hover:text-primary-container transition-colors duration-300 mt-4"
+                aria-label="Instagram de Maíra Lessa"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }

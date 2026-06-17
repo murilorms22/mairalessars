@@ -101,6 +101,20 @@ html {
   overflow-x: hidden;
 }
 
+/* Trava de Orientação (Landscape Blocker) para Mobile */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  #landscape-blocker {
+    display: flex !important;
+  }
+  #main-content {
+    display: none !important;
+  }
+  /* Fix scroll freezing if user tilted */
+  body {
+    overflow: hidden;
+  }
+}
+
 body {
   background: var(--color-background);
   color: var(--color-on-background);

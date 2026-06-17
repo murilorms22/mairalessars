@@ -20,16 +20,16 @@ export default function FinalCTA() {
       </div>
 
       <div className="relative z-10 w-full max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop">
-        <div className="space-y-24">
+        <div className="space-y-16 md:space-y-24">
           {/* Hero Phrase */}
-          <div className="text-center fade-up mb-32">
+          <div className="text-center fade-up mb-16 md:mb-32">
             <h2
-              className="text-[56px] md:text-[80px] leading-[1.1] mb-8 font-bold"
+              className="text-[36px] md:text-[56px] lg:text-[80px] leading-[1.1] mb-8 font-bold"
               style={{ fontFamily: "var(--font-montserrat)" }}
             >
               Quando a dor vira propósito, <br />
               <span
-                className="text-primary-container text-[72px] md:text-[100px] block mt-6"
+                className="text-primary-container text-[48px] md:text-[72px] lg:text-[100px] block mt-6"
                 style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
               >
                 a caminhada ganha sentido.
@@ -69,7 +69,7 @@ export default function FinalCTA() {
           </div>
 
           {/* Block 2: Image Left, Text Right */}
-          <div className="grid grid-cols-12 gap-gutter items-center mb-32">
+          <div className="grid grid-cols-12 gap-gutter items-center mb-12 md:mb-32">
             <div className="col-span-12 lg:col-span-5 order-2 lg:order-1 relative fade-up">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
                 <Image
@@ -84,12 +84,12 @@ export default function FinalCTA() {
               <div className="absolute top-1/2 -right-10 w-40 h-40 bg-primary-container/20 rounded-full blur-3xl animate-pulse -z-10" />
             </div>
             <div className="col-span-12 lg:col-span-8 lg:col-start-7 order-1 lg:order-2 dark-glass p-10 rounded-[40px] border border-white/5 fade-up">
-              <p className="text-[20px] md:text-[20px] text-surface-variant/90 leading-relaxed font-[var(--font-inter)]">
+              <p className="text-[22px] md:text-[20px] text-surface-variant/90 leading-relaxed font-[var(--font-inter)]">
                 É sobre <span style={{ color: "var(--color-primary-container)" }}><b>todas as mulheres</b></span> que precisaram ser fortes antes mesmo de estarem prontas.<br />
                 É sobre <span style={{ color: "var(--color-primary-container)" }}><b>famílias</b></span> que merecem ser vistas.<br />
                 É sobre <span style={{ color: "var(--color-primary-container)" }}><b>cidades</b></span> que precisam ser ouvidas. <br />
                 É sobre <span style={{ color: "var(--color-primary-container)" }}><b>transformar</b></span> vivências em movimento.<br />
-                É sobre construir, com responsabilidade, um futuro mais próximo das <span style={{ color: "var(--color-primary-container)" }}><b>pessoas</b></span>.
+                É sobre <span style={{ color: "var(--color-primary-container)" }}><b>construir</b></span>, com responsabilidade, um futuro mais próximo das <span style={{ color: "var(--color-primary-container)" }}><b>pessoas</b></span>.
 
               </p>
             </div>

@@ -30,7 +30,7 @@ export default function PhotoStack() {
   return (
     <div className="w-full bg-[#0a0a0a] py-24 flex flex-col items-center justify-center overflow-hidden">
       <p className="text-white/80 text-[24px] md:text-[32px] uppercase tracking-[0.3em] md:tracking-[0.5em] mb-16 font-[var(--font-inter)] font-black text-center px-4">
-        Momentos da caminhada
+        Momentos dessa jornada
       </p>
 
       <div className="w-full max-w-7xl relative group overflow-hidden px-0">
@@ -46,6 +46,7 @@ export default function PhotoStack() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
+          loop={true}
           initialSlide={3}
           coverflowEffect={{
             rotate: 0,
