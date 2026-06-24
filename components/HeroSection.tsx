@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <header
-      className="relative w-full min-h-dvh h-[calc(100dvh/var(--vp-zoom))] flex items-center overflow-hidden bg-white pt-24"
+      className="relative w-full min-h-dvh h-[calc(100dvh/var(--vp-zoom))] flex items-center overflow-hidden bg-gray-50 pt-24"
       id="inicio"
     >
 
@@ -49,8 +49,29 @@ export default function HeroSection() {
 
         {/* Right: Photo + Signature */}
         <div className="hidden relative lg:flex col-span-6 h-full items-end justify-center">
+          
+          {/* Fundo decorativo (Fundo Hero) */}
+          <div
+            className="absolute left-0 right-0 mx-auto pointer-events-none z-0"
+            style={{
+              bottom: "25%",
+              height: "calc(75% + 300px)",
+              width: "120%",
+              maxWidth: "800px",
+            }}
+          >
+            <Image
+              alt="Fundo complementar"
+              className="object-contain object-bottom opacity-90"
+              src="/optimized/fundo-hero.webp"
+              fill
+              priority
+              sizes="(max-width: 1024px) 0vw, 60vw"
+            />
+          </div>
+
           {/* Maíra photo container */}
-          <div className="relative z-10 h-[95%] w-full flex flex-col items-center justify-end">
+          <div className="relative z-10 h-full w-full flex flex-col items-center justify-end">
             <div
               className="absolute inset-0"
               style={{
@@ -61,10 +82,10 @@ export default function HeroSection() {
               <Image
                 alt="Maíra Lessa"
                 className="object-contain object-bottom drop-shadow-2xl select-none origin-bottom"
-                src="/optimized/maira-hero3.webp"
+                src="/optimized/maira-hero5.webp"
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 0vw, 50vw"
                 draggable={false}
               />
             </div>
