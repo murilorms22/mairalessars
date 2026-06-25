@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import ViewportScaler from "@/components/ViewportScaler";
@@ -39,6 +39,12 @@ export const metadata: Metadata = {
     "Sul Gaúcho",
     "propósito",
   ],
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

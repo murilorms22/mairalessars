@@ -76,9 +76,13 @@ export default function TopNavBar() {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled
-          ? "py-3 shadow-[0_1px_0_0_rgba(0,0,0,0.06)]"
-          : "py-3"
+          ? "shadow-[0_1px_0_0_rgba(0,0,0,0.06)]"
+          : ""
       }`}
+      style={{
+        paddingTop: "calc(0.75rem + env(safe-area-inset-top))",
+        paddingBottom: "0.75rem",
+      }}
     >
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
         {/* Logo */}
@@ -177,7 +181,10 @@ export default function TopNavBar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center pt-20"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center"
+            style={{
+              paddingTop: "calc(5rem + env(safe-area-inset-top))",
+            }}
           >
             <div className="flex flex-col items-center gap-8 w-full px-6">
               {navLinks.map((link) => {
