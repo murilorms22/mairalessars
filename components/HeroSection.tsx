@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <header
-      className="relative w-full min-h-dvh h-[calc(100dvh/var(--vp-zoom))] flex items-center overflow-hidden bg-gray-50 pt-24"
+      className="relative w-full min-h-dvh h-[calc(100dvh/var(--vp-zoom))] flex items-center overflow-hidden bg-[#f7f8f8] pt-24"
       id="inicio"
     >
 
@@ -49,15 +49,15 @@ export default function HeroSection() {
 
         {/* Right: Photo + Signature */}
         <div className="hidden relative lg:flex col-span-6 h-full items-end justify-center">
-          
+
           {/* Fundo decorativo (Fundo Hero) */}
           <div
             className="absolute left-0 right-0 mx-auto pointer-events-none z-0"
             style={{
-              bottom: "25%",
-              height: "calc(75% + 300px)",
-              width: "120%",
-              maxWidth: "800px",
+              bottom: "40%",
+              height: "calc(70% + 200px)",
+              width: "100%",
+              maxWidth: "700px",
             }}
           >
             <Image
@@ -73,7 +73,7 @@ export default function HeroSection() {
           {/* Maíra photo container */}
           <div className="relative z-10 h-full w-full flex flex-col items-center justify-end">
             <div
-              className="absolute inset-0"
+              className="absolute -top-[10%] inset-x-0 bottom-35"
               style={{
                 WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
                 maskImage: "linear-gradient(to bottom, black 65%, transparent 100%)"
@@ -81,7 +81,7 @@ export default function HeroSection() {
             >
               <Image
                 alt="Maíra Lessa"
-                className="object-contain object-bottom drop-shadow-2xl select-none origin-bottom"
+                className="object-contain object-bottom drop-shadow-2xl select-none origin-bottom scale-105"
                 src="/optimized/maira-hero5.webp"
                 fill
                 priority

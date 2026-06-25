@@ -40,7 +40,7 @@ const imageConfigs = {
 };
 
 // Adiciona dinamicamente as imagens do carrossel
-for (let i = 1; i <= 11; i++) {
+for (let i = 1; i <= 12; i++) {
   imageConfigs[`carrossel-${i}.jpeg`] = { width: 600, quality: 75 };
 }
 

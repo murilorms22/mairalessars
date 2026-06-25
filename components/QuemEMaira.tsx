@@ -62,7 +62,7 @@ export default function QuemEMaira() {
               <Image
                 alt="Maíra Lessa Portrait"
                 className="object-cover transition-all duration-700 group-hover:scale-105"
-                src="/optimized/jornada.webp"
+                src="/optimized/jornada2.webp"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

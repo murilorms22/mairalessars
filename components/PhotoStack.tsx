@@ -24,6 +24,7 @@ const images = [
   "/optimized/carrossel-9.webp",
   "/optimized/carrossel-10.webp",
   "/optimized/carrossel-11.webp",
+  "/optimized/carrossel-12.webp",
 ];
 
 export default function PhotoStack() {
