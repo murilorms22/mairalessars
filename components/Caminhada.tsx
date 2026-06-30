@@ -145,7 +145,7 @@ export default function Caminhada() {
       </div>
 
       {/* Ticker Bar */}
-      <div className="w-full bg-primary-container py-3 md:py-6 mt-32 relative z-20 overflow-hidden">
+      <div className="w-full bg-primary-container py-1.5 md:py-3 mt-32 relative z-20 overflow-hidden">
         <div className="ticker-wrap">
           <div
             style={{
@@ -167,7 +167,7 @@ export default function Caminhada() {
                 }}
               >
                 <span
-                  className="text-on-surface font-black text-[24px] md:text-[56px] uppercase px-4 md:px-8"
+                  className="text-on-surface font-black text-[16px] md:text-[32px] uppercase px-3 md:px-6"
                   style={{
                     fontFamily: "var(--font-montserrat)",
                     letterSpacing: "0.12em",
@@ -177,7 +177,7 @@ export default function Caminhada() {
                   {city}
                 </span>
                 <span
-                  className="text-on-surface/50 font-black text-[24px] md:text-[32px]"
+                  className="text-on-surface/50 font-black text-[14px] md:text-[20px]"
                   style={{ flexShrink: 0 }}
                   aria-hidden="true"
                 >
