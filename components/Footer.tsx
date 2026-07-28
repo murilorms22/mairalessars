@@ -6,7 +6,6 @@ const footerLinks = [
   { href: "#quem-e", label: "Quem é Maíra" },
   { href: "#proposito", label: "Propósito" },
   { href: "#caminhada", label: "Caminhada" },
-  { href: "#novidades", label: "Receba novidades" },
   {
     href: "https://instagram.com",
     label: "Instagram",
