@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { text } from "stream/consumers";
 
 export default function FinalCTA() {
   return (
     <section
       className="min-h-screen w-full bg-[#050505] text-surface-container-lowest overflow-hidden relative flex items-center justify-center py-[160px]"
-      id="novidades"
     >
       {/* Immersive Background */}
       <div className="absolute inset-0 z-0">
