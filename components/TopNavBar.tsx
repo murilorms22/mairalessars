@@ -172,16 +172,17 @@ export default function TopNavBar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-gradient-to-b from-[#8E007D] to-[#2E0029] backdrop-blur-xl flex flex-col items-center justify-center text-white"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="fixed inset-0 z-50 h-dvh w-screen bg-[#2E0029]/98 backdrop-blur-2xl flex flex-col items-center justify-center text-white"
             style={{
-              paddingTop: "calc(5rem + env(safe-area-inset-top))",
+              paddingTop: "calc(6rem + env(safe-area-inset-top))",
+              paddingBottom: "calc(2rem + env(safe-area-inset-bottom))",
             }}
           >
-            <div className="flex flex-col items-center gap-8 w-full px-6">
+            <div className="flex flex-col items-center gap-8 w-full max-w-sm px-6 my-auto">
               {navLinks.map((link) => {
                 const isActive = link.id && activeSection === link.id;
 
@@ -190,9 +191,9 @@ export default function TopNavBar() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`relative text-[20px] font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${isActive
-                      ? "scale-110 text-primary-container"
-                      : "scale-100 text-white"
+                    className={`relative text-[20px] font-bold uppercase tracking-[0.1em] transition-all duration-300 ${isActive
+                      ? "text-[#C4DB1D] scale-105"
+                      : "text-white hover:text-[#ED069A]"
                       }`}
                   >
                     {link.label}
@@ -206,7 +207,7 @@ export default function TopNavBar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-white hover:text-primary-container transition-colors duration-300 mt-4"
+                className="text-white hover:text-[#C4DB1D] transition-colors duration-300 mt-6"
                 aria-label="Instagram de Maíra Lessa"
               >
                 <svg
