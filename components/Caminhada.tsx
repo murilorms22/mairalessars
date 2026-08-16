@@ -30,24 +30,22 @@ const images = [
 export default function Caminhada() {
   return (
     <section
-      className="pt-section-gap w-full bg-surface-container-low overflow-hidden relative"
+      className="pt-section-gap w-full bg-[#1F001B] text-white overflow-hidden relative"
       id="caminhada"
     >
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
         {/* Left-aligned Header */}
         <div className="mb-16 fade-up">
-          <h2 className="text-[14px] font-semibold uppercase text-secondary tracking-widest mb-6 flex items-center gap-4 font-[var(--font-inter)]">
-            <span className="w-16 h-px bg-primary-container inline-block" />
+          <h2 className="text-[14px] font-semibold uppercase text-[#C4DB1D] tracking-widest mb-6 flex items-center gap-4 font-[var(--font-inter)]">
+            <span className="w-16 h-px bg-[#C4DB1D] inline-block" />
             Caminhada
           </h2>
           <h3
-            className="text-[48px] md:text-[64px] text-on-surface leading-tight font-bold max-w-4xl"
-            style={{ fontFamily: "var(--font-montserrat)" }}
+            className="text-[48px] md:text-[64px] text-white leading-tight font-bold max-w-4xl font-sans"
           >
             Uma caminhada feita de{" "}
             <span
-              className="text-primary-container"
-              style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
+              className="text-[#C4DB1D] font-sans font-extrabold"
             >
               encontros
             </span>
@@ -60,8 +58,8 @@ export default function Caminhada() {
           {/* Left Column: Text Cards */}
           <div className="col-span-12 lg:col-span-4 flex flex-col gap-6">
             {/* Card 1 */}
-            <div className="bg-surface-container-lowest rounded-2xl p-8 shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-surface-variant/30">
-              <p className="text-[16px] text-secondary leading-relaxed font-[var(--font-inter)]">
+            <div className="bg-[#2E0029] rounded-2xl p-8 shadow-[0_4px_30px_rgba(142,0,125,0.2)] border border-[#ED069A]/30">
+              <p className="text-[16px] text-white/90 leading-relaxed font-[var(--font-inter)]">
                 O Rio Grande do Sul é feito de muitas vozes. Vozes de mães,
                 trabalhadores, empreendedores, famílias, professores,
                 profissionais da saúde e lideranças.
@@ -69,10 +67,9 @@ export default function Caminhada() {
             </div>
 
             {/* Card 2 — Highlighted */}
-            <div className="bg-primary-container/10 rounded-2xl p-8 border-l-4 border-primary-container">
+            <div className="bg-gradient-to-r from-[#8E007D] to-[#ED069A] rounded-2xl p-8 border-l-4 border-[#C4DB1D] shadow-lg">
               <p
-                className="text-[18px] text-on-surface leading-relaxed font-semibold"
-                style={{ fontFamily: "var(--font-inter)" }}
+                className="text-[18px] text-white leading-relaxed font-semibold font-sans"
               >
                 Em cada conversa, uma dor. Em cada cidade, uma realidade. Em
                 cada história, há um motivo para seguir.
@@ -80,8 +77,8 @@ export default function Caminhada() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-surface-container-lowest rounded-2xl p-8 shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-surface-variant/30">
-              <p className="text-[16px] text-secondary leading-relaxed font-[var(--font-inter)]">
+            <div className="bg-[#2E0029] rounded-2xl p-8 shadow-[0_4px_30px_rgba(142,0,125,0.2)] border border-[#ED069A]/30">
+              <p className="text-[16px] text-white/90 leading-relaxed font-[var(--font-inter)]">
                 Mais do que falar sobre as pessoas, Maíra acredita em falar com
                 as pessoas. Sua presença nas cidades é parte essencial dessa
                 construção. Não se trata apenas de comunicar uma causa. Trata-se
@@ -96,7 +93,7 @@ export default function Caminhada() {
             <div className="grid grid-cols-3 gap-4 h-full">
 
               {/* Image 1 — tall portrait, spans 2 rows */}
-              <div className="col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg group relative"
+              <div className="col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg border border-[#ED069A]/30 group relative"
                 style={{ minHeight: "320px" }}>
                 <Image
                   alt={images[0].alt}
@@ -108,7 +105,7 @@ export default function Caminhada() {
               </div>
 
               {/* Image 2 — wide 16:9 top-right */}
-              <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg group aspect-[16/9] relative">
+              <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg border border-[#ED069A]/30 group aspect-[16/9] relative">
                 <Image
                   alt={images[1].alt}
                   className="object-cover transition-all duration-700 group-hover:scale-105"
@@ -119,7 +116,7 @@ export default function Caminhada() {
               </div>
 
               {/* Bottom row: small square + wider landscape */}
-              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-[4/5] md:aspect-square relative">
+              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg border border-[#ED069A]/30 group aspect-[4/5] md:aspect-square relative">
                 <Image
                   alt={images[2].alt}
                   className="object-cover transition-all duration-700 group-hover:scale-105"
@@ -129,7 +126,7 @@ export default function Caminhada() {
                 />
               </div>
 
-              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg group aspect-[4/5] md:aspect-square relative">
+              <div className="col-span-1 rounded-2xl overflow-hidden shadow-lg border border-[#ED069A]/30 group aspect-[4/5] md:aspect-square relative">
                 <Image
                   alt={images[3].alt}
                   className="object-cover transition-all duration-700 group-hover:scale-105"
@@ -145,7 +142,7 @@ export default function Caminhada() {
       </div>
 
       {/* Ticker Bar */}
-      <div className="w-full bg-primary-container py-1.5 md:py-3 mt-32 relative z-20 overflow-hidden">
+      <div className="w-full bg-[#C4DB1D] py-2 md:py-4 mt-32 relative z-20 overflow-hidden shadow-lg">
         <div className="ticker-wrap">
           <div
             style={{
@@ -167,17 +164,12 @@ export default function Caminhada() {
                 }}
               >
                 <span
-                  className="text-on-surface font-black text-[16px] md:text-[32px] uppercase px-3 md:px-6"
-                  style={{
-                    fontFamily: "var(--font-montserrat)",
-                    letterSpacing: "0.12em",
-                    whiteSpace: "nowrap",
-                  }}
+                  className="text-[#8E007D] font-black text-[16px] md:text-[32px] uppercase px-3 md:px-6 font-sans tracking-[0.12em] whitespace-nowrap"
                 >
                   {city}
                 </span>
                 <span
-                  className="text-on-surface/50 font-black text-[14px] md:text-[20px]"
+                  className="text-[#8E007D]/50 font-black text-[14px] md:text-[20px]"
                   style={{ flexShrink: 0 }}
                   aria-hidden="true"
                 >

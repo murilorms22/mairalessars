@@ -29,16 +29,16 @@ const images = [
 
 export default function PhotoStack() {
   return (
-    <div className="w-full bg-[#0a0a0a] py-24 flex flex-col items-center justify-center overflow-hidden">
-      <p className="text-white/80 text-[24px] md:text-[32px] uppercase tracking-[0.3em] md:tracking-[0.5em] mb-16 font-[var(--font-inter)] font-black text-center px-4">
+    <div className="w-full bg-[#140012] py-24 flex flex-col items-center justify-center overflow-hidden border-t border-[#ED069A]/20">
+      <p className="text-white text-[24px] md:text-[32px] uppercase tracking-[0.3em] md:tracking-[0.5em] mb-16 font-[var(--font-inter)] font-black text-center px-4">
         Momentos dessa jornada
       </p>
 
       <div className="w-full max-w-7xl relative group overflow-hidden px-0">
-        <button className="swiper-prev-btn absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-20 bg-black/60 text-white p-3 md:p-4 rounded-full hover:bg-black/90 transition-all opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center backdrop-blur-md border border-white/10">
+        <button className="swiper-prev-btn absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-20 bg-[#8E007D]/80 text-[#C4DB1D] p-3 md:p-4 rounded-full hover:bg-[#ED069A] hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center backdrop-blur-md border border-[#ED069A]/30">
           <span className="material-symbols-outlined text-2xl md:text-3xl">chevron_left</span>
         </button>
-        <button className="swiper-next-btn absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-20 bg-black/60 text-white p-3 md:p-4 rounded-full hover:bg-black/90 transition-all opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center backdrop-blur-md border border-white/10">
+        <button className="swiper-next-btn absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-20 bg-[#8E007D]/80 text-[#C4DB1D] p-3 md:p-4 rounded-full hover:bg-[#ED069A] hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center backdrop-blur-md border border-[#ED069A]/30">
           <span className="material-symbols-outlined text-2xl md:text-3xl">chevron_right</span>
         </button>
 
@@ -67,7 +67,7 @@ export default function PhotoStack() {
           {images.map((src, index) => (
             <SwiperSlide
               key={index}
-              className="relative rounded-xl overflow-hidden shadow-2xl border border-white/20 bg-black"
+              className="relative rounded-xl overflow-hidden shadow-2xl border border-[#ED069A]/30 bg-[#2E0029]"
             >
               <Image
                 src={src}
@@ -111,10 +111,11 @@ export default function PhotoStack() {
         }
 
         .swiper-pagination-bullet {
-          background: #fff !important;
-          opacity: 0.3;
+          background: #ED069A !important;
+          opacity: 0.4;
         }
         .swiper-pagination-bullet-active {
+          background: #C4DB1D !important;
           opacity: 1 !important;
         }
       `}</style>

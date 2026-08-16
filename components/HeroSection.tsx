@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <header
-      className="relative w-full min-h-dvh lg:h-[calc(100dvh/var(--vp-zoom))] flex items-center lg:overflow-hidden overflow-visible bg-[#f7f8f8] pb-16 lg:pb-0"
+      className="relative w-full min-h-dvh lg:h-[calc(100dvh/var(--vp-zoom))] flex items-center lg:overflow-hidden overflow-visible bg-[#820067] text-white pb-16 lg:pb-0"
       style={{
         paddingTop: "calc(6rem + env(safe-area-inset-top))",
       }}
@@ -62,29 +62,28 @@ export default function HeroSection() {
           {/* Text content wrapper */}
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left -mt-24 lg:mt-0 relative z-20 px-4 lg:px-0">
             <h1
-              className="text-[34px] md:text-[64px] lg:text-[88px] text-[#282726] mb-8 tracking-tight leading-[1.05] font-black"
-              style={{ fontFamily: "var(--font-montserrat)" }}
+              className="text-[34px] md:text-[64px] lg:text-[88px] text-white mb-8 tracking-tight leading-[1.05] font-black font-sans"
             >
               A força de uma
               <br />
-              {/* "história" — green text, graphite highlight bar */}
+              {/* "história" — deeper hero purple text, green highlight bar */}
               <span className="relative inline-block group">
-                <span className="relative z-10 text-primary-container">
+                <span className="relative z-10 text-[#ED069A] font-black px-2">
                   história
                 </span>
-                <span className="absolute bottom-1 left-0 w-full h-[42%] bg-[#282726] -z-10 group-hover:h-[55%] transition-all duration-500" />
+                <span className="absolute bottom-1 left-0 w-full h-[75%] bg-[#C4DB1D] -z-10 group-hover:h-[85%] transition-all duration-500 rounded-md" />
               </span>
               {'‌ '}que <br /> virou propósito.
             </h1>
 
-            <p className="text-[16px] md:text-[18px] text-[#282726] leading-relaxed mb-10 max-w-md font-[var(--font-inter)] mx-auto lg:mx-0">
+            <p className="text-[16px] md:text-[18px] text-white/90 leading-relaxed mb-10 max-w-md font-[var(--font-inter)] mx-auto lg:mx-0">
               Maíra Lessa é jornalista, comunicadora, mãe e uma voz que nasceu
               da escuta, da coragem e do compromisso com as pessoas do Rio Grande
               do Sul.
             </p>
 
             <a
-              className="inline-flex items-center justify-center gap-3 bg-primary-container text-[#282726] font-bold text-[13px] uppercase tracking-[0.12em] px-10 py-5 rounded-full hover:bg-[#1a1c1c] hover:text-primary-container transition-all duration-300 transform hover:-translate-y-1 shadow-[0_8px_30px_-8px_rgba(163,230,53,0.6)] group mx-auto lg:mx-0"
+              className="inline-flex items-center justify-center gap-3 bg-[#C4DB1D] text-[#8E007D] font-black text-[13px] uppercase tracking-[0.12em] px-10 py-5 rounded-full hover:bg-[#ED069A] hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-[0_8px_30px_-5px_rgba(196,219,29,0.5)] group mx-auto lg:mx-0"
               href="#quem-e"
             >
               Conhecer a trajetória
@@ -141,9 +140,10 @@ export default function HeroSection() {
             {/* Signature over the transparent gradient */}
             <div className="relative z-20 w-[100%] max-w-[700px] aspect-[2/1] mb-24 drop-shadow-xl">
               <Image
-                src="/optimized/maira-ass.webp"
-                alt="Assinatura Maíra Lessa"
+                src="/optimized/mairalessa-hero.webp"
+                alt="Maíra Lessa"
                 fill
+                sizes="(max-width: 1024px) 100vw, 700px"
                 className="object-contain object-center"
                 priority
               />

@@ -62,35 +62,33 @@ const purposeCards = [
 export default function Proposito() {
   return (
     <section
-      className="py-section-gap w-full bg-[#000000] text-surface-container-lowest relative overflow-hidden"
+      className="py-section-gap w-full bg-[#140012] text-white relative overflow-hidden"
       id="proposito"
     >
       {/* Radial gradient background */}
-      <div className="absolute top-0 right-0 w-full h-full bg-radial from-primary-container/10 to-black/50 z-0" />
+      <div className="absolute top-0 right-0 w-full h-full bg-radial from-[#8E007D]/30 via-[#ED069A]/10 to-[#0F000E] z-0" />
 
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-10 fade-up">
           <div className="max-w-3xl">
-            <h2 className="text-[14px] font-semibold uppercase text-primary-container tracking-widest mb-6 inline-flex items-center gap-4 font-[var(--font-inter)]">
-              <span className="w-16 h-px bg-primary-container inline-block" />
+            <h2 className="text-[14px] font-semibold uppercase text-[#C4DB1D] tracking-widest mb-6 inline-flex items-center gap-4 font-[var(--font-inter)]">
+              <span className="w-16 h-px bg-[#C4DB1D] inline-block" />
               Propósito
             </h2>
             <h3
-              className="text-[36px] md:text-[48px] lg:text-[60px] text-surface-container-lowest leading-[1.1] font-bold"
-              style={{ fontFamily: "var(--font-montserrat)" }}
+              className="text-[36px] md:text-[48px] lg:text-[60px] text-white leading-[1.1] font-bold font-sans"
             >
               Pela saúde, inclusão e desenvolvimento do <br />
               <span
-                className="text-primary-container text-[48px] md:text-[72px] lg:text-[90px]"
-                style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
+                className="text-[#C4DB1D] text-[48px] md:text-[72px] lg:text-[90px] font-sans font-extrabold"
               >
                 Sul Gaúcho
               </span>
             </h3>
           </div>
           <div className="max-w-xl text-right">
-            <p className="text-[20px] text-surface-variant/70 leading-relaxed text-left lg:text-right font-[var(--font-inter)]">
+            <p className="text-[20px] text-white/80 leading-relaxed text-left lg:text-right font-[var(--font-inter)]">
               Nenhuma transformação real começa distante das pessoas. É preciso
               estar perto. É preciso ouvir. Entender as dores de cada
               comunidade.
@@ -103,32 +101,31 @@ export default function Proposito() {
           {purposeCards.map((card) => (
             <div
               key={card.title}
-              className={`group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer ${card.offsetY ? "lg:translate-y-12" : ""
+              className={`group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer border border-[#ED069A]/30 ${card.offsetY ? "lg:translate-y-12" : ""
                 }`}
             >
               <Image
                 alt={card.title}
-                className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                className="object-cover opacity-85 group-hover:scale-110 transition-all duration-700 ease-in-out"
                 src={card.image}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#140012] via-[#8E007D]/50 to-transparent opacity-60 group-hover:opacity-75 transition-opacity" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <div className="w-12 h-12 bg-primary-container/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-6 text-primary-container border border-primary-container/30">
+                <div className="w-12 h-12 bg-[#C4DB1D]/40 backdrop-blur-md rounded-xl flex items-center justify-center mb-6 text-[#C4DB1D] border border-[#C4DB1D]/40">
                   <span className="material-symbols-outlined text-[24px]">
                     {card.icon}
                   </span>
                 </div>
                 <h4
-                  className="text-[28px] text-white font-bold mb-2 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 ease-out"
-                  style={{ fontFamily: "var(--font-montserrat)" }}
+                  className="text-[28px] text-white font-bold mb-2 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 ease-out font-sans"
                 >
                   {card.title}
                 </h4>
                 {/* Description slides up from below on PC, always visible on mobile */}
                 <div className="overflow-hidden">
-                  <p className="text-surface-variant/80 text-[15px] leading-relaxed translate-y-0 opacity-100 md:translate-y-full md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out delay-75 pt-2">
+                  <p className="text-white/80 text-[15px] leading-relaxed translate-y-0 opacity-100 md:translate-y-full md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out delay-75 pt-2">
                     {card.description}
                   </p>
                 </div>
@@ -138,23 +135,21 @@ export default function Proposito() {
         </div>
 
         {/* Manifesto */}
-        <div className="max-w-5xl mx-auto text-center border-t border-surface-variant/10 pt-24 fade-up">
+        <div className="max-w-5xl mx-auto text-center border-t border-[#ED069A]/20 pt-24 fade-up">
           <p
-            className="text-[36px] md:text-[48px] text-surface-container-lowest leading-tight font-light"
-            style={{ fontFamily: "var(--font-montserrat)" }}
+            className="text-[36px] md:text-[48px] text-white leading-tight font-light font-sans"
           >
             Maíra acredita que{" "}
-            <span className="text-primary-container relative inline-block group">
+            <span className="text-[#C4DB1D] relative inline-block group">
               propósito
-              <span className="absolute bottom-2 left-0 w-full h-[30%] bg-primary-container/30 -z-10 group-hover:h-[80%] transition-all duration-500 rounded-sm" />
+              <span className="absolute bottom-2 left-0 w-full h-[30%] bg-[#8E007D]/50 -z-10 group-hover:h-[80%] transition-all duration-500 rounded-sm" />
             </span>
             {" "}não se declara apenas em palavras.
             <br />
             Propósito se mostra na presença, na escuta e na coragem de seguir.
             Na{" "}
             <strong
-              className="text-primary-container font-bold text-[48px] md:text-[64px] block mt-4 drop-shadow-[0_0_15px_rgba(163,230,53,0.3)]"
-              style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800 }}
+              className="text-[#C4DB1D] font-bold text-[48px] md:text-[64px] block mt-4 drop-shadow-[0_0_20px_rgba(196,219,29,0.5)] font-sans font-extrabold"
             >
               superAÇÃO.
             </strong>

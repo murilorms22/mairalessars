@@ -28,7 +28,7 @@ const footerLinks: FooterLink[] = [
 
 export default function Footer() {
   return (
-    <footer id="novidades" className="bg-surface-container-low text-secondary relative z-20 border-t border-surface-variant/10">
+    <footer id="novidades" className="bg-[#0d000c] text-white/80 relative z-20 border-t border-[#ED069A]/20">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-10 font-[var(--font-inter)]">
         {/* Top row: brand + nav */}
         <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start gap-12 mb-12 text-center md:text-left">
@@ -36,7 +36,7 @@ export default function Footer() {
           <Link href="#inicio" className="shrink-0 hover:opacity-80 transition-opacity duration-300">
             <div className="relative h-36 w-[300px] mx-auto md:mx-0">
               <Image
-                src="/optimized/maira-logo.webp"
+                src="/optimized/mairalessa-hero.webp"
                 alt="Maíra Lessa"
                 className="object-contain object-left"
                 fill
@@ -54,7 +54,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[14px] font-bold uppercase bg-primary-container text-on-primary-container px-5 py-2.5 rounded-full hover:bg-primary hover:text-white transition-all duration-300 tracking-[0.08em] shadow-sm hover:shadow-md hover:scale-105"
+                  className="inline-flex items-center gap-2 text-[14px] font-bold uppercase bg-[#C4DB1D] text-[#8E007D] px-5 py-2.5 rounded-full hover:bg-[#ED069A] hover:text-white transition-all duration-300 tracking-[0.08em] shadow-sm hover:shadow-md hover:scale-105"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ export default function Footer() {
                   href={link.href}
                   target={link.external ? "_blank" : undefined}
                   rel={link.external ? "noopener noreferrer" : undefined}
-                  className="text-[14px] font-semibold uppercase text-secondary hover:text-primary-container transition-colors duration-200 tracking-[0.08em]"
+                  className="text-[14px] font-semibold uppercase text-white/80 hover:text-[#ED069A] transition-colors duration-200 tracking-[0.08em]"
                 >
                   {link.label}
                 </Link>
@@ -84,20 +84,20 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-surface-variant/20 pt-8 flex flex-col md:flex-row justify-between">
+        <div className="border-t border-[#ED069A]/20 pt-8 flex flex-col md:flex-row justify-between">
           <div>
-            <p className="text-[13px] text-secondary/60 text-center md:text-left">
+            <p className="text-[13px] text-white/60 text-center md:text-left">
               © 2024 Maíra Lessa. Todos os direitos reservados.
             </p>
           </div>
           <div>
-            <p className="text-[13px] text-secondary/60 text-center md:text-left">
+            <p className="text-[13px] text-white/60 text-center md:text-left">
               Desenvolvido por{" "}
               <Link
                 href="https://muxstudio.com.br"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-container hover:text-primary transition-colors duration-200"
+                className="text-[#C4DB1D] hover:text-[#ED069A] transition-colors duration-200 font-semibold"
               >
                 MUX Studio
               </Link>

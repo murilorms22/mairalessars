@@ -1,55 +1,110 @@
 @import "tailwindcss";
 
+/* ===== FONTS DEFINITIONS ===== */
+@font-face {
+  font-family: "Brunson";
+  src: url("/fonts/Rubik-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brunson";
+  src: url("/fonts/Rubik-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brunson";
+  src: url("/fonts/Rubik-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brunson";
+  src: url("/fonts/Rubik-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brunson";
+  src: url("/fonts/Rubik-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brunson";
+  src: url("/fonts/Rubik-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brunson";
+  src: url("/fonts/Rubik-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Feeling Passionate";
+  src: url("/fonts/Feeling%20Passionate%20Personal%20Use%20Only.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ===== DESIGN SYSTEM TOKENS ===== */
 @theme inline {
-  /* --- Colors --- */
-  --color-surface: #f9f9f9;
-  --color-surface-dim: #dadada;
-  --color-surface-bright: #f9f9f9;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #f3f3f3;
-  --color-surface-container: #eeeeee;
-  --color-surface-container-high: #e8e8e8;
-  --color-surface-container-highest: #e2e2e2;
-  --color-on-surface: #1a1c1c;
-  --color-on-surface-variant: #424936;
-  --color-inverse-surface: #2f3131;
-  --color-inverse-on-surface: #f1f1f1;
-  --color-outline: #727a64;
-  --color-outline-variant: #c2cab0;
-  --color-surface-tint: #446900;
-  --color-primary: #446900;
+  /* --- Brand Colors --- */
+  --color-roxo: #8E007D;
+  --color-rosa: #ED069A;
+  --color-verde: #C4DB1D;
+  --color-laranja: #FA5E0E;
+  --color-amarelo: #FFB600;
+
+  /* --- Semantic Colors --- */
+  --color-primary: #8E007D;
   --color-on-primary: #ffffff;
-  --color-primary-container: #a3e635;
-  --color-on-primary-container: #416400;
-  --color-inverse-primary: #98da27;
-  --color-secondary: #5f5e5e;
+  --color-primary-container: #C4DB1D;
+  --color-on-primary-container: #8E007D;
+
+  --color-secondary: #ED069A;
   --color-on-secondary: #ffffff;
-  --color-secondary-container: #e2dfde;
-  --color-on-secondary-container: #636262;
-  --color-tertiary: #5d5f5f;
+  --color-secondary-container: #8E007D;
+  --color-on-secondary-container: #ffffff;
+
+  --color-tertiary: #FA5E0E;
   --color-on-tertiary: #ffffff;
-  --color-tertiary-container: #d2d2d2;
-  --color-on-tertiary-container: #595a5b;
-  --color-error: #ba1a1a;
-  --color-on-error: #ffffff;
-  --color-error-container: #ffdad6;
-  --color-on-error-container: #93000a;
-  --color-primary-fixed: #b2f746;
-  --color-primary-fixed-dim: #98da27;
-  --color-on-primary-fixed: #121f00;
-  --color-on-primary-fixed-variant: #334f00;
-  --color-secondary-fixed: #e5e2e1;
-  --color-secondary-fixed-dim: #c8c6c5;
-  --color-on-secondary-fixed: #1c1b1b;
-  --color-on-secondary-fixed-variant: #474746;
-  --color-tertiary-fixed: #e2e2e2;
-  --color-tertiary-fixed-dim: #c6c6c7;
-  --color-on-tertiary-fixed: #1a1c1c;
-  --color-on-tertiary-fixed-variant: #454747;
-  --color-background: #f9f9f9;
-  --color-on-background: #1a1c1c;
-  --color-surface-variant: #e2e2e2;
+
+  --color-accent: #C4DB1D;
+  --color-warning: #FFB600;
+
+  --color-surface: #140012;
+  --color-surface-dim: #260022;
+  --color-surface-bright: #3D0036;
+  --color-surface-container-lowest: #0F000E;
+  --color-surface-container-low: #1F001B;
+  --color-surface-container: #2E0029;
+  --color-surface-container-high: #3A0034;
+  --color-surface-container-highest: #4A0042;
+  --color-surface-variant: rgba(237, 6, 154, 0.15);
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #e0d0de;
+
+  --color-background: #0d000c;
+  --color-on-background: #ffffff;
 
   /* --- Spacing --- */
   --spacing-gutter: 24px;
@@ -60,8 +115,11 @@
   --spacing-margin-desktop: 64px;
 
   /* --- Fonts --- */
-  --font-montserrat: "Montserrat", sans-serif;
-  --font-inter: "Inter", sans-serif;
+  --font-brunson: "Brunson", sans-serif;
+  --font-script: "Feeling Passionate", cursive;
+  --font-sans: "Brunson", sans-serif;
+  --font-montserrat: "Brunson", sans-serif;
+  --font-inter: "Brunson", sans-serif;
 }
 
 .material-symbols-outlined {
@@ -118,15 +176,19 @@ html {
 body {
   background: var(--color-background);
   color: var(--color-on-background);
-  font-family: var(--font-inter);
+  font-family: var(--font-brunson);
   font-size: 16px;
   line-height: 1.6;
   zoom: var(--vp-zoom);
 }
 
+.font-script {
+  font-family: var(--font-script), cursive !important;
+}
+
 ::selection {
-  background-color: var(--color-primary-container);
-  color: var(--color-on-primary-container);
+  background-color: var(--color-verde);
+  color: #8E007D;
 }
 
 /* ===== SCROLL ANIMATIONS ===== */
@@ -153,17 +215,17 @@ body {
 
 /* ===== GLASSMORPHISM ===== */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(142, 0, 125, 0.15);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(237, 6, 154, 0.2);
 }
 
 .dark-glass {
-  background: rgba(18, 18, 18, 0.6);
+  background: rgba(46, 0, 41, 0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(163, 230, 53, 0.1);
+  border: 1px solid rgba(237, 6, 154, 0.25);
 }
 
 /* ===== GLOW EFFECT ===== */
@@ -175,7 +237,7 @@ body {
   content: "";
   position: absolute;
   inset: -1px;
-  background: linear-gradient(45deg, #a3e635, transparent);
+  background: linear-gradient(45deg, #C4DB1D, #ED069A, transparent);
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
@@ -183,7 +245,7 @@ body {
 }
 
 .glow-effect:hover::before {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* ===== INTERACTIVE CARD ===== */
@@ -193,8 +255,8 @@ body {
 
 .interactive-card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 60px -15px rgba(163, 230, 53, 0.15);
-  border-color: rgba(163, 230, 53, 0.3);
+  box-shadow: 0 30px 60px -15px rgba(237, 6, 154, 0.25);
+  border-color: rgba(196, 219, 29, 0.5);
   z-index: 10;
 }
 

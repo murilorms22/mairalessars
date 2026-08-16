@@ -74,11 +74,10 @@ export default function TopNavBar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
-        isScrolled
-          ? "shadow-[0_1px_0_0_rgba(0,0,0,0.06)]"
-          : ""
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#2E0029]/90 backdrop-blur-md transition-all duration-300 border-b border-[#ED069A]/20 ${isScrolled
+        ? "shadow-[0_4px_20px_rgba(142,0,125,0.3)]"
+        : ""
+        }`}
       style={{
         paddingTop: "calc(0.75rem + env(safe-area-inset-top))",
         paddingBottom: "0.75rem",
@@ -88,16 +87,15 @@ export default function TopNavBar() {
         {/* Logo */}
         <Link
           href="#inicio"
-          className="flex items-center opacity-90 hover:opacity-100 transition-opacity duration-300 shrink-0"
+          className="flex items-center opacity-90 hover:opacity-100 transition-opacity duration-300 shrink-0 w-56"
         >
           <Image
-            src="/maira-logo.png"
+            src="/optimized/mairalessa-hero.webp"
             alt="Maíra Lessa"
             width={200}
             height={80}
-            className={`w-auto object-contain transition-all duration-300 ${
-              isScrolled ? "h-14" : "h-20"
-            }`}
+            className={`w-auto object-contain transition-all duration-300 ${isScrolled ? "h-14" : "h-20"
+              }`}
             priority
           />
         </Link>
@@ -111,36 +109,33 @@ export default function TopNavBar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`relative text-[13px] font-semibold uppercase tracking-[0.08em] transition-all duration-300 group ${
-                  isActive
-                    ? "scale-110 text-primary-container"
-                    : "scale-100 text-[#282726]"
-                }`}
+                className={`relative text-[13px] font-semibold uppercase tracking-[0.08em] transition-all duration-300 group ${isActive
+                  ? "scale-110 text-primary-container"
+                  : "scale-100 text-white/90"
+                  }`}
               >
                 <span
-                  className={`transition-all duration-300 ${
-                    !isActive &&
-                    "group-hover:bg-primary-container group-hover:bg-clip-text group-hover:text-transparent"
-                  }`}
+                  className={`transition-all duration-300 ${!isActive &&
+                    "group-hover:text-[#ED069A]"
+                    }`}
                 >
                   {link.label}
                 </span>
                 {/* Animated underline */}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-primary-container transition-all duration-300 ${
-                    isActive ? "w-full" : "w-0 group-hover:w-full"
-                  }`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-primary-container transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
                 />
               </Link>
             );
           })}
-          
+
           {/* Instagram Icon */}
           <Link
             href="https://instagram.com/mairalessars"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#282726] hover:text-primary-container transition-colors duration-300 ml-2"
+            className="text-white/90 hover:text-primary-container transition-colors duration-300 ml-2"
             aria-label="Instagram de Maíra Lessa"
           >
             <svg
@@ -163,7 +158,7 @@ export default function TopNavBar() {
 
         {/* Mobile: only hamburger icon */}
         <button
-          className="md:hidden text-[#282726] p-2 hover:text-primary-container transition-colors z-[60]"
+          className="md:hidden text-white p-2 hover:text-primary-container transition-colors z-[60]"
           aria-label="Toggle menu"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -181,7 +176,7 @@ export default function TopNavBar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 bg-gradient-to-b from-[#8E007D] to-[#2E0029] backdrop-blur-xl flex flex-col items-center justify-center text-white"
             style={{
               paddingTop: "calc(5rem + env(safe-area-inset-top))",
             }}
@@ -195,24 +190,23 @@ export default function TopNavBar() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`relative text-[20px] font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
-                      isActive
-                        ? "scale-110 text-primary-container"
-                        : "scale-100 text-[#282726]"
-                    }`}
+                    className={`relative text-[20px] font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${isActive
+                      ? "scale-110 text-primary-container"
+                      : "scale-100 text-white"
+                      }`}
                   >
                     {link.label}
                   </Link>
                 );
               })}
-              
+
               {/* Instagram Icon Mobile */}
               <Link
                 href="https://instagram.com/mairalessars"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-[#282726] hover:text-primary-container transition-colors duration-300 mt-4"
+                className="text-white hover:text-primary-container transition-colors duration-300 mt-4"
                 aria-label="Instagram de Maíra Lessa"
               >
                 <svg
