@@ -38,20 +38,20 @@ export default function HeroSection() {
           <div className="lg:hidden relative w-full h-[40vh] min-h-[300px] flex items-end justify-center overflow-visible mb-6">
             {/* Fundo decorativo (Bandeira Hero) */}
             <div
-              className="absolute left-0 right-0 mx-auto pointer-events-none z-0 overflow-visible opacity-100 transform-gpu origin-bottom-left"
+              className="absolute left-0 right-0 mx-auto pointer-events-none z-0 overflow-visible opacity-50 transform-gpu origin-bottom-left"
               style={{
-                bottom: "20%",
-                height: "100%",
-                width: "120%",
-                maxWidth: "650px",
-                transform: "translateX(-10%) rotate(-30deg)",
-                WebkitMaskImage: "linear-gradient(135deg, black 30%, rgba(0,0,0,0.7) 65%, transparent 95%)",
-                maskImage: "linear-gradient(135deg, black 30%, rgba(0,0,0,0.7) 65%, transparent 95%)",
+                bottom: "18%",
+                height: "140%",
+                width: "140%",
+                maxWidth: "750px",
+                transform: "translateX(-5%) rotate(-10deg)",
+                WebkitMaskImage: "linear-gradient(135deg, black 45%, rgba(0,0,0,0.6) 70%, transparent 95%)",
+                maskImage: "linear-gradient(135deg, black 45%, rgba(0,0,0,0.6) 70%, transparent 82%)",
               }}
             >
               <Image
                 alt="Bandeira Hero"
-                className="object-contain object-left-bottom opacity-90"
+                className="object-contain object-left-bottom opacity-90 scale-110"
                 src="/optimized/bandeira-hero.webp"
                 fill
                 priority
