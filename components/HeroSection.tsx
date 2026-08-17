@@ -3,12 +3,29 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <header
-      className="relative w-full min-h-dvh lg:h-[calc(100dvh/var(--vp-zoom))] flex items-center lg:overflow-hidden overflow-visible bg-[#820067] text-white pb-16 lg:pb-0"
+      className="relative w-full min-h-dvh lg:h-[calc(100dvh/var(--vp-zoom))] flex items-center lg:overflow-hidden overflow-visible bg-[#1F001B] text-white pb-16 lg:pb-0 border-b-1 border-[#ED069A]/30"
       style={{
         paddingTop: "calc(6rem + env(safe-area-inset-top))",
       }}
       id="inicio"
     >
+      {/* Dynamic Ambient Background Shapes (matching QuemEMaira / Proposito style) */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Main top-left hero purple glow */}
+        <div className="absolute -top-32 -left-32 w-[900px] h-[900px] bg-[#8E007D]/85 rounded-full blur-[140px]" />
+
+        {/* Top-right vibrant pink glow */}
+        <div className="absolute -top-20 -right-20 w-[800px] h-[800px] bg-[#ED069A]/30 rounded-full blur-[150px]" />
+
+        {/* Center-right secondary glowing orb */}
+        <div className="absolute top-1/3 right-10 w-[600px] h-[600px] bg-[#8E007D]/50 rounded-full blur-[130px]" />
+
+        {/* Bottom deep surface transition glow */}
+        <div className="absolute -bottom-40 left-1/4 w-[1000px] h-[500px] bg-[#140012] rounded-full blur-[100px]" />
+
+        {/* Accent green glow spot near text */}
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#C4DB1D]/10 rounded-full blur-[120px]" />
+      </div>
 
 
       {/* Content grid */}
@@ -19,20 +36,21 @@ export default function HeroSection() {
 
           {/* Mobile-only images container */}
           <div className="lg:hidden relative w-full h-[40vh] min-h-[300px] flex items-end justify-center overflow-hidden mb-6">
-            {/* Fundo decorativo (Fundo Hero) */}
+            {/* Fundo decorativo (Bandeira Hero) */}
             <div
-              className="absolute left-0 right-0 mx-auto pointer-events-none z-0"
+              className="absolute left-0 right-0 mx-auto pointer-events-none z-0 overflow-visible"
               style={{
-                bottom: "15%",
-                height: "80%",
-                width: "90%",
-                maxWidth: "450px",
+                bottom: "45%",
+                height: "70%",
+                width: "85%",
+                maxWidth: "520px",
+                transform: "translateX(28%)",
               }}
             >
               <Image
-                alt="Fundo complementar"
-                className="object-contain object-bottom opacity-90"
-                src="/optimized/fundo-hero.webp"
+                alt="Bandeira Hero"
+                className="object-contain object-bottom opacity-90 scale-90"
+                src="/optimized/bandeira-hero.webp"
                 fill
                 priority
                 sizes="100vw"
@@ -97,23 +115,23 @@ export default function HeroSection() {
         {/* Right: Photo + Signature */}
         <div className="hidden relative lg:flex col-span-6 h-full items-end justify-center">
 
-          {/* Fundo decorativo (Fundo Hero) */}
+          {/* Fundo decorativo (Bandeira Hero) */}
           <div
-            className="absolute left-0 right-0 mx-auto pointer-events-none z-0"
+            className="absolute -right-[90%] pointer-events-none z-0"
             style={{
-              bottom: "40%",
-              height: "calc(70% + 200px)",
-              width: "100%",
-              maxWidth: "700px",
+              bottom: "55%",
+              height: "calc(95% + 250px)",
+              width: "160%",
+              maxWidth: "1100px",
             }}
           >
             <Image
-              alt="Fundo complementar"
-              className="object-contain object-bottom opacity-90"
-              src="/optimized/fundo-hero.webp"
+              alt="Bandeira Hero"
+              className="object-contain object-bottom opacity-90 scale-110"
+              src="/optimized/bandeira-hero.webp"
               fill
               priority
-              sizes="(max-width: 1024px) 0vw, 60vw"
+              sizes="(max-width: 1024px) 0vw, 80vw"
             />
           </div>
 
@@ -137,16 +155,31 @@ export default function HeroSection() {
               />
             </div>
 
-            {/* Signature over the transparent gradient */}
-            <div className="relative z-20 w-[100%] max-w-[700px] aspect-[2/1] mb-24 drop-shadow-xl">
-              <Image
-                src="/optimized/mairalessa-hero.webp"
-                alt="Maíra Lessa"
-                fill
-                sizes="(max-width: 1024px) 100vw, 700px"
-                className="object-contain object-center"
-                priority
-              />
+            {/* Signature & Logo Podemos Container */}
+            <div className="relative z-20 w-[100%] max-w-[700px] flex flex-col items-center mb-16 drop-shadow-xl">
+              {/* Signature */}
+              <div className="relative w-full aspect-[2.2/1]">
+                <Image
+                  src="/optimized/mairalessa-hero.webp"
+                  alt="Maíra Lessa"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 700px"
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
+
+              {/* Logo Podemos (half width of signature, centered) */}
+              <div className="relative w-[45%] max-w-[320px] aspect-[3.5/1] -mt-4">
+                <Image
+                  src="/optimized/logo-podemos.webp"
+                  alt="Podemos Logo"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 350px"
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>

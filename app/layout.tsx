@@ -43,12 +43,9 @@ export const metadata: Metadata = {
     "deputada federal"
   ],
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png", sizes: "128x128" },
-    ],
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
+    apple: "/favicon.ico",
   },
   verification: {
     google: "13lqYrRoW6uemlO7g0QF5zWqA8DwlwmnsXQpuf2DJyo",
