@@ -74,7 +74,7 @@ export default function TopNavBar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#2E0029]/90 backdrop-blur-md transition-all duration-300 border-b border-[#ED069A]/20 ${isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#420038]/10 backdrop-blur-md transition-all duration-300 border-b border-[#ED069A]/20 ${isScrolled
         ? "shadow-[0_4px_20px_rgba(142,0,125,0.3)]"
         : ""
         }`}

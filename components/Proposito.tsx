@@ -62,11 +62,20 @@ const purposeCards = [
 export default function Proposito() {
   return (
     <section
-      className="py-section-gap w-full bg-[#140012] text-white relative overflow-hidden"
+      className="py-section-gap w-full bg-gradient-to-br from-[#FA7D00] via-[#E6007E] to-[#7B0068] text-white relative overflow-hidden"
       id="proposito"
     >
-      {/* Radial gradient background */}
-      <div className="absolute top-0 right-0 w-full h-full bg-radial from-[#8E007D]/30 via-[#ED069A]/10 to-[#0F000E] z-0" />
+      {/* Dynamic Ambient Glows matching the Hero poster style */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Top-left warm orange glow */}
+        <div className="absolute -top-32 -left-32 w-[800px] h-[800px] bg-[#FF8A00]/70 rounded-full blur-[120px]" />
+        {/* Top-right vibrant magenta glow */}
+        <div className="absolute -top-20 -right-20 w-[850px] h-[850px] bg-[#ED069A]/80 rounded-full blur-[130px]" />
+        {/* Center lime-green glow */}
+        <div className="absolute top-1/3 -left-20 w-[550px] h-[550px] bg-[#C4DB1D]/50 rounded-full blur-[110px]" />
+        {/* Bottom magenta-purple glow */}
+        <div className="absolute -bottom-30 right-10 w-[750px] h-[750px] bg-[#8E007D]/70 rounded-full blur-[120px]" />
+      </div>
 
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
         {/* Header */}
@@ -88,7 +97,7 @@ export default function Proposito() {
             </h3>
           </div>
           <div className="max-w-xl text-right">
-            <p className="text-[20px] text-white/80 leading-relaxed text-left lg:text-right font-[var(--font-inter)]">
+            <p className="text-[20px] text-white/90 leading-relaxed text-left lg:text-right font-[var(--font-inter)]">
               Nenhuma transformação real começa distante das pessoas. É preciso
               estar perto. É preciso ouvir. Entender as dores de cada
               comunidade.
@@ -101,19 +110,19 @@ export default function Proposito() {
           {purposeCards.map((card) => (
             <div
               key={card.title}
-              className={`group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer border border-[#ED069A]/30 ${card.offsetY ? "lg:translate-y-12" : ""
+              className={`group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer border border-white/20 shadow-2xl backdrop-blur-sm ${card.offsetY ? "lg:translate-y-12" : ""
                 }`}
             >
               <Image
                 alt={card.title}
-                className="object-cover opacity-85 group-hover:scale-110 transition-all duration-700 ease-in-out"
+                className="object-cover opacity-90 group-hover:scale-110 transition-all duration-700 ease-in-out"
                 src={card.image}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#140012] via-[#8E007D]/50 to-transparent opacity-60 group-hover:opacity-75 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2E0029]/95 via-[#8E007D]/40 to-transparent opacity-70 group-hover:opacity-85 transition-opacity" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <div className="w-12 h-12 bg-[#C4DB1D]/40 backdrop-blur-md rounded-xl flex items-center justify-center mb-6 text-[#C4DB1D] border border-[#C4DB1D]/40">
+                <div className="w-12 h-12 bg-[#C4DB1D] backdrop-blur-md rounded-xl flex items-center justify-center mb-6 text-[#8E007D] shadow-md">
                   <span className="material-symbols-outlined text-[24px]">
                     {card.icon}
                   </span>
@@ -125,7 +134,7 @@ export default function Proposito() {
                 </h4>
                 {/* Description slides up from below on PC, always visible on mobile */}
                 <div className="overflow-hidden">
-                  <p className="text-white/80 text-[15px] leading-relaxed translate-y-0 opacity-100 md:translate-y-full md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out delay-75 pt-2">
+                  <p className="text-white/90 text-[15px] leading-relaxed translate-y-0 opacity-100 md:translate-y-full md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out delay-75 pt-2">
                     {card.description}
                   </p>
                 </div>
@@ -135,21 +144,21 @@ export default function Proposito() {
         </div>
 
         {/* Manifesto */}
-        <div className="max-w-5xl mx-auto text-center border-t border-[#ED069A]/20 pt-24 fade-up">
+        <div className="max-w-5xl mx-auto text-center border-t border-white/20 pt-24 fade-up">
           <p
             className="text-[36px] md:text-[48px] text-white leading-tight font-light font-sans"
           >
             Maíra acredita que{" "}
-            <span className="text-[#C4DB1D] relative inline-block group">
+            <span className="text-[#C4DB1D] font-bold relative inline-block group">
               propósito
-              <span className="absolute bottom-2 left-0 w-full h-[30%] bg-[#8E007D]/50 -z-10 group-hover:h-[80%] transition-all duration-500 rounded-sm" />
+              <span className="absolute bottom-2 left-0 w-full h-[30%] bg-[#8E007D]/60 -z-10 group-hover:h-[80%] transition-all duration-500 rounded-sm" />
             </span>
             {" "}não se declara apenas em palavras.
             <br />
             Propósito se mostra na presença, na escuta e na coragem de seguir.
             Na{" "}
             <strong
-              className="text-[#C4DB1D] font-bold text-[48px] md:text-[64px] block mt-4 drop-shadow-[0_0_20px_rgba(196,219,29,0.5)] font-sans font-extrabold"
+              className="text-[#C4DB1D] font-bold text-[48px] md:text-[64px] block mt-4 drop-shadow-[0_0_25px_rgba(196,219,29,0.6)] font-sans font-extrabold"
             >
               superAÇÃO.
             </strong>

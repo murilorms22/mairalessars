@@ -3,28 +3,28 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <header
-      className="relative w-full min-h-dvh lg:h-[calc(100dvh/var(--vp-zoom))] flex items-center lg:overflow-hidden overflow-visible bg-[#1F001B] text-white pb-16 lg:pb-0 border-b-1 border-[#ED069A]/30"
+      className="relative w-full min-h-dvh lg:h-[calc(100dvh/var(--vp-zoom))] flex items-center lg:overflow-hidden overflow-visible bg-gradient-to-br from-[#FA7D00] via-[#E6007E] to-[#7B0068] text-white pb-16 lg:pb-0 border-b-1 border-[#ED069A]/30"
       style={{
         paddingTop: "calc(6rem + env(safe-area-inset-top))",
       }}
       id="inicio"
     >
-      {/* Dynamic Ambient Background Shapes (matching QuemEMaira / Proposito style) */}
+      {/* Dynamic Ambient Glows matching the poster */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-        {/* Main top-left hero purple glow */}
-        <div className="absolute -top-32 -left-32 w-[900px] h-[900px] bg-[#8E007D]/85 rounded-full blur-[140px]" />
+        {/* Top-left warm orange glow */}
+        <div className="absolute -top-32 -left-32 w-[900px] h-[900px] bg-[#FF8A00]/80 rounded-full blur-[120px]" />
 
-        {/* Top-right vibrant pink glow */}
-        <div className="absolute -top-20 -right-20 w-[800px] h-[800px] bg-[#ED069A]/30 rounded-full blur-[150px]" />
+        {/* Top-right vibrant magenta glow */}
+        <div className="absolute -top-20 -right-20 w-[950px] h-[950px] bg-[#ED069A]/90 rounded-full blur-[130px]" />
 
-        {/* Center-right secondary glowing orb */}
-        <div className="absolute top-1/3 right-10 w-[600px] h-[600px] bg-[#8E007D]/50 rounded-full blur-[130px]" />
+        {/* Left lime-green glow behind Maíra */}
+        <div className="absolute top-1/3 -left-32 w-[600px] h-[600px] bg-[#C4DB1D]/60 rounded-full blur-[110px]" />
 
-        {/* Bottom deep surface transition glow */}
-        <div className="absolute -bottom-40 left-1/4 w-[1000px] h-[500px] bg-[#140012] rounded-full blur-[100px]" />
+        {/* Center-right secondary magenta-purple glow */}
+        <div className="absolute top-1/2 right-10 w-[700px] h-[700px] bg-[#8E007D]/70 rounded-full blur-[120px]" />
 
-        {/* Accent green glow spot near text */}
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#C4DB1D]/10 rounded-full blur-[120px]" />
+        {/* Bottom deep magenta-purple transition glow */}
+        <div className="absolute -bottom-40 left-1/4 w-[1100px] h-[600px] bg-[#5C004E] rounded-full blur-[100px]" />
       </div>
 
 
@@ -35,21 +35,23 @@ export default function HeroSection() {
         <div className="col-span-12 lg:col-span-6 fade-up py-8 lg:py-0 flex flex-col items-center lg:items-start">
 
           {/* Mobile-only images container */}
-          <div className="lg:hidden relative w-full h-[40vh] min-h-[300px] flex items-end justify-center overflow-hidden mb-6">
+          <div className="lg:hidden relative w-full h-[40vh] min-h-[300px] flex items-end justify-center overflow-visible mb-6">
             {/* Fundo decorativo (Bandeira Hero) */}
             <div
-              className="absolute left-0 right-0 mx-auto pointer-events-none z-0 overflow-visible"
+              className="absolute left-0 right-0 mx-auto pointer-events-none z-0 overflow-visible opacity-100 transform-gpu origin-bottom-left"
               style={{
-                bottom: "45%",
-                height: "70%",
-                width: "85%",
-                maxWidth: "520px",
-                transform: "translateX(28%)",
+                bottom: "20%",
+                height: "100%",
+                width: "120%",
+                maxWidth: "650px",
+                transform: "translateX(-10%) rotate(-30deg)",
+                WebkitMaskImage: "linear-gradient(135deg, black 30%, rgba(0,0,0,0.7) 65%, transparent 95%)",
+                maskImage: "linear-gradient(135deg, black 30%, rgba(0,0,0,0.7) 65%, transparent 95%)",
               }}
             >
               <Image
                 alt="Bandeira Hero"
-                className="object-contain object-bottom opacity-90 scale-90"
+                className="object-contain object-left-bottom opacity-90"
                 src="/optimized/bandeira-hero.webp"
                 fill
                 priority
@@ -113,25 +115,28 @@ export default function HeroSection() {
         </div>
 
         {/* Right: Photo + Signature */}
-        <div className="hidden relative lg:flex col-span-6 h-full items-end justify-center">
+        <div className="hidden relative lg:flex col-span-6 h-full items-end justify-center overflow-visible">
 
           {/* Fundo decorativo (Bandeira Hero) */}
           <div
-            className="absolute -right-[90%] pointer-events-none z-0"
+            className="absolute -right-[40%] pointer-events-none z-0 opacity-90 transform-gpu origin-bottom-left"
             style={{
               bottom: "55%",
-              height: "calc(95% + 250px)",
-              width: "160%",
-              maxWidth: "1100px",
+              height: "calc(120% + 300px)",
+              width: "180%",
+              maxWidth: "1600px",
+              transform: "rotate(5deg)",
+              WebkitMaskImage: "linear-gradient(135deg, black 45%, rgba(0,0,0,0.6) 70%, transparent 95%)",
+              maskImage: "linear-gradient(135deg, black 45%, rgba(0,0,0,0.6) 70%, transparent 92%)",
             }}
           >
             <Image
               alt="Bandeira Hero"
-              className="object-contain object-bottom opacity-90 scale-110"
+              className="object-contain object-left-bottom opacity-90 scale-110"
               src="/optimized/bandeira-hero.webp"
               fill
               priority
-              sizes="(max-width: 1024px) 0vw, 80vw"
+              sizes="(max-width: 1024px) 0vw, 90vw"
             />
           </div>
 

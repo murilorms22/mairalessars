@@ -91,20 +91,20 @@
   --color-accent: #C4DB1D;
   --color-warning: #FFB600;
 
-  --color-surface: #140012;
-  --color-surface-dim: #260022;
-  --color-surface-bright: #3D0036;
-  --color-surface-container-lowest: #0F000E;
-  --color-surface-container-low: #1F001B;
-  --color-surface-container: #2E0029;
-  --color-surface-container-high: #3A0034;
-  --color-surface-container-highest: #4A0042;
-  --color-surface-variant: rgba(237, 6, 154, 0.15);
-  --color-on-surface: #ffffff;
-  --color-on-surface-variant: #e0d0de;
+  --color-surface: #ffffff;
+  --color-surface-dim: #fff5fa;
+  --color-surface-bright: #fff0f7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff8fc;
+  --color-surface-container: #fff0f7;
+  --color-surface-container-high: #fce6f3;
+  --color-surface-container-highest: #f7d6eb;
+  --color-surface-variant: rgba(237, 6, 154, 0.08);
+  --color-on-surface: #2E0029;
+  --color-on-surface-variant: #4A0042;
 
-  --color-background: #0d000c;
-  --color-on-background: #ffffff;
+  --color-background: #FFF9FC;
+  --color-on-background: #2E0029;
 
   /* --- Spacing --- */
   --spacing-gutter: 24px;
@@ -215,17 +215,19 @@ body {
 
 /* ===== GLASSMORPHISM ===== */
 .glass-panel {
-  background: rgba(142, 0, 125, 0.15);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(237, 6, 154, 0.2);
+  border: 1px solid rgba(237, 6, 154, 0.18);
+  box-shadow: 0 20px 40px -10px rgba(142, 0, 125, 0.08);
 }
 
 .dark-glass {
-  background: rgba(46, 0, 41, 0.7);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(237, 6, 154, 0.25);
+  border: 1px solid rgba(237, 6, 154, 0.2);
+  box-shadow: 0 30px 60px -15px rgba(237, 6, 154, 0.12);
 }
 
 /* ===== GLOW EFFECT ===== */
