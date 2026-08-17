@@ -119,13 +119,13 @@ export default function HeroSection() {
 
           {/* Fundo decorativo (Bandeira Hero) */}
           <div
-            className="absolute -right-[40%] pointer-events-none z-0 opacity-90 transform-gpu origin-bottom-left"
+            className="absolute -right-[105%] pointer-events-none z-0 opacity-90 transform-gpu origin-bottom-left"
             style={{
-              bottom: "55%",
-              height: "calc(120% + 300px)",
-              width: "180%",
-              maxWidth: "1600px",
-              transform: "rotate(5deg)",
+              bottom: "30%",
+              height: "calc(220% + 900px)",
+              width: "250%",
+              maxWidth: "2700px",
+              transform: "rotate(-10deg)",
               WebkitMaskImage: "linear-gradient(135deg, black 45%, rgba(0,0,0,0.6) 70%, transparent 95%)",
               maskImage: "linear-gradient(135deg, black 45%, rgba(0,0,0,0.6) 70%, transparent 92%)",
             }}
@@ -146,7 +146,7 @@ export default function HeroSection() {
               className="absolute -top-[10%] inset-x-0 bottom-35"
               style={{
                 WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
-                maskImage: "linear-gradient(to bottom, black 65%, transparent 100%)"
+                maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)"
               }}
             >
               <Image
