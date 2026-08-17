@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     "Sul Gaúcho",
     "propósito",
   ],
+  verification: {
+    google: "13lqYrRoW6uemlO7g0QF5zWqA8DwlwmnsXQpuf2DJyo",
+  },
 };
 
 export const viewport: Viewport = {
