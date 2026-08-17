@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     "Rio Grande do Sul",
     "Sul Gaúcho",
     "propósito",
+    "candidata",
+    "eleições",
+    "deputada federal"
   ],
   icons: {
     icon: [
