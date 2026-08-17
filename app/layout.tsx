@@ -39,6 +39,14 @@ export const metadata: Metadata = {
     "Sul Gaúcho",
     "propósito",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "128x128" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   verification: {
     google: "13lqYrRoW6uemlO7g0QF5zWqA8DwlwmnsXQpuf2DJyo",
   },
