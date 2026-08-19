@@ -31,22 +31,34 @@ export default function Footer() {
     <footer id="novidades" className="bg-white text-[#2E0029] relative z-20 border-t border-[#ED069A]/20">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-10 font-[var(--font-inter)]">
         {/* Top row: brand + nav */}
-        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start gap-12 mb-12 text-center md:text-left">
-          {/* Brand logo */}
-          <Link href="#inicio" className="shrink-0 hover:opacity-80 transition-opacity duration-300">
-            <div className="relative h-36 w-[300px] mx-auto md:mx-0">
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-8 mb-12 text-center md:text-left">
+          {/* Brand logos */}
+          <div className="flex flex-col sm:flex-row items-center gap-6 shrink-0">
+            <Link href="#inicio" className="shrink-0 hover:opacity-80 transition-opacity duration-300">
+              <div className="relative h-24 w-[210px]">
+                <Image
+                  src="/optimized/maira-logo-roxa.webp"
+                  alt="Maíra Lessa"
+                  className="object-contain object-left"
+                  fill
+                  sizes="210px"
+                />
+              </div>
+            </Link>
+            <div className="h-8 w-px bg-[#ED069A]/20 hidden sm:block" />
+            <div className="relative h-9 w-[130px] shrink-0">
               <Image
-                src="/optimized/maira-logo-roxa.webp"
-                alt="Maíra Lessa"
+                src="/optimized/logo-podemos.webp"
+                alt="Podemos Logo"
                 className="object-contain object-left"
                 fill
-                sizes="300px"
+                sizes="130px"
               />
             </div>
-          </Link>
+          </div>
 
           {/* Nav links */}
-          <nav className="flex flex-col md:flex-row flex-wrap my-auto gap-x-8 gap-y-4 justify-center md:justify-end items-center w-full md:w-auto">
+          <nav className="flex flex-row flex-wrap sm:flex-nowrap justify-center xl:justify-end items-center gap-x-5 xl:gap-x-6 gap-y-3">
             {footerLinks.map((link) =>
               link.isButton ? (
                 <Link
@@ -54,12 +66,12 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[14px] font-bold uppercase bg-[#ED069A] text-white px-6 py-3 rounded-full hover:bg-[#8E007D] transition-all duration-300 tracking-[0.08em] shadow-md hover:shadow-lg hover:scale-105"
+                  className="inline-flex items-center gap-2 text-[13px] font-bold uppercase bg-[#ED069A] text-white px-5 py-2.5 rounded-full hover:bg-[#8E007D] transition-all duration-300 tracking-[0.08em] shadow-md hover:shadow-lg hover:scale-105 shrink-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     className="shrink-0"
@@ -74,7 +86,7 @@ export default function Footer() {
                   href={link.href}
                   target={link.external ? "_blank" : undefined}
                   rel={link.external ? "noopener noreferrer" : undefined}
-                  className="text-[14px] font-bold uppercase text-[#2E0029] hover:text-[#ED069A] transition-colors duration-200 tracking-[0.08em]"
+                  className="text-[13px] font-bold uppercase text-[#2E0029] hover:text-[#ED069A] transition-colors duration-200 tracking-[0.08em] shrink-0"
                 >
                   {link.label}
                 </Link>
@@ -84,25 +96,24 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-[#ED069A]/15 pt-8 flex flex-col md:flex-row justify-between">
-          <div>
-            <p className="text-[13px] text-[#2E0029]/70 text-center md:text-left font-medium">
-              © 2024 Maíra Lessa. Todos os direitos reservados.
-            </p>
-          </div>
-          <div>
-            <p className="text-[13px] text-[#2E0029]/70 text-center md:text-left font-medium">
-              Desenvolvido por{" "}
-              <Link
-                href="https://muxstudio.com.br"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#ED069A] hover:text-[#8E007D] transition-colors duration-200 font-bold"
-              >
-                MUX Studio
-              </Link>
-            </p>
-          </div>
+        <div className="border-t border-[#ED069A]/15 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-[#2E0029]/70 font-medium">
+          <p className="text-center md:text-left">
+            © 2026 Maíra Lessa. Todos os direitos reservados.
+          </p>
+          <p className="text-center font-semibold text-[#2E0029]">
+            CNPJ: 68.293.873/0001-73
+          </p>
+          <p className="text-center md:text-right">
+            Desenvolvido por{" "}
+            <Link
+              href="https://muxstudio.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#ED069A] hover:text-[#8E007D] transition-colors duration-200 font-bold"
+            >
+              MUX Studio
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

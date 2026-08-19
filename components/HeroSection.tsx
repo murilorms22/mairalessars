@@ -80,7 +80,31 @@ export default function HeroSection() {
           </div>
 
           {/* Text content wrapper */}
-          <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left -mt-24 lg:mt-0 relative z-20 px-4 lg:px-0">
+          <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left -mt-20 lg:mt-0 relative z-20 px-4 lg:px-0">
+            {/* Mobile-only Signature & Logo Podemos */}
+            <div className="lg:hidden relative z-20 w-[80%] max-w-[320px] flex flex-col items-center mb-6 drop-shadow-xl">
+              <div className="relative w-full aspect-[2.2/1]">
+                <Image
+                  src="/optimized/mairalessa-hero.webp"
+                  alt="Maíra Lessa"
+                  fill
+                  sizes="320px"
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
+              <div className="relative w-[48%] max-w-[170px] aspect-[3.5/1] -mt-3">
+                <Image
+                  src="/optimized/logo-podemos.webp"
+                  alt="Podemos Logo"
+                  fill
+                  sizes="170px"
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
+            </div>
+
             <h1
               className="text-[34px] md:text-[64px] lg:text-[88px] text-white mb-8 tracking-tight leading-[1.05] font-black font-sans"
             >
